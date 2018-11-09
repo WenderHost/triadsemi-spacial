@@ -1,0 +1,22 @@
+{# dropdown.twig #}
+{% if menu %}
+  <div class="dropdown-menu" role="menu">
+    {% if parentlink is not empty and parentlink != '#' %}
+    <a class="dropdown-item overview" target="" href="{{ parentlink }}">{{ parenttitle }}</a>
+    {% endif %}
+    {% for item in menu %}
+      {% set submenu = item.get_children %}
+      {% if submenu %}
+        <div class="dropdown dropdown-submenu">
+          <a class="dropdown-item dropdown-toggle" href="{{ item.link }}" data-toggle="dropdown">
+            {{ item.title }}
+            <i class="ion-chevron-right"></i>
+          </a>
+          {% include "partial/dropdown.twig" with {'menu': submenu, 'parentlink': item.link, 'parenttitle': item.title ~ ' Overview' } %}
+        </div>
+      {% else %}
+        <a class="dropdown-item" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

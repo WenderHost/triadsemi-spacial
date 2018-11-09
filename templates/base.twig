@@ -6,37 +6,52 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main navbar navbar-expand-lg navbar-light fixed-top" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-			{% endblock %}
-		</header>
+<body class="{{body_class}}" data-template="base.twig">
+	<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
+	<nav id="nav-main" class="nav-main navbar navbar-expand-lg navbar-light fixed-top" role="navigation">
+		<div class="container no-override">
+      <a class="navbar-brand" href="{{ site.url }}">
+        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-triadsemi_dark.800x411.png" class="d-none d-lg-inline mr-2" style="height: 54px;" />
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+				{% include "menu.twig" with {'menu': menu.get_items} %}
 			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+		</div>
+	</nav><!-- #nav -->
+
+  <div class="header-hero">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 fadeInScaleDown">
+          <h2>
+            Spacial Header Light
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<section id="content" role="main" class="content-wrapper container">
+		{% if title %}<h1>{{title}}</h1>{% endif %}
+		<div class="wrapper {{sidebar_class}}">
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
+		</div>
+		{% if sidebar %}
+			<aside class="layout-sidebar">
+				{{sidebar}}
+			</aside>
+		{% endif %}
+	</section>
 
 		{% block footer %}
-			<footer id="footer">
+			<footer class="footer" id="footer">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}

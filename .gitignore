@@ -1,2 +1,7 @@
 vendor
 wp-content
+node_modules
+*.sublime-*
+dist
+tests
+bin

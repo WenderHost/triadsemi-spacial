@@ -1,9 +1,18 @@
 {% if menu %}
-	<ul>
+	<ul class="navbar-nav">
 	{% for item in menu %}
-		<li class="{{ item.classes | join(' ') }}">
-			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'menu': item.get_children} %}
+    {% set submenu = item.get_children %}
+		<li class="{{ item.classes | join(' ') }} nav-item active{% if submenu %} dropdown{% endif %}">
+      {% set classes = ( submenu )? 'nav-link dropdown dropdown-toggle' : 'nav-link' %}
+			<a class="{{ classes }}" target="{{ item.target }}" href="{{ item.link }}">
+        {{ item.title }}
+        {% if submenu %}
+          <i class="ion-chevron-down"></i>
+        {% endif %}
+      </a>
+      {% if submenu %}
+        {% include "partial/dropdown.twig" with {'menu': item.get_children} %}
+      {% endif %}
 		</li>
 	{% endfor %}
 	</ul>
