@@ -1,6 +1,6 @@
 <?php
 
-namespace TriadSemiCart\enqueues;
+namespace TriadSemiSpacial\enqueues;
 
 function enqueue_scripts(){
   wp_enqueue_style( 'spacial', get_stylesheet_directory_uri() . '/dist/theme.min.css', null, filemtime( get_stylesheet_directory() . '/dist/theme.min.css' ) );

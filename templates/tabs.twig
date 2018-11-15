@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <section id="content" role="main" class="content-wrapper container">
+    {{post.content}}
+  {% if tabs %}
+    <ul class="nav nav-tabs" id="page-tabs" role="tablist">
+    {% for tab in tabs %}
+      <li class="nav-item">
+        <a class="nav-link{% if 1 == loop.index %} active{% endif %}" id="{{ tab.id }}-tab" data-toggle="tab" href="#{{ tab.id }}" role="tab" aria-controls="{{ tab.id }}" area-selected="{% if 1 == loop.index %}true{% else %}false{% endif %}">{{ tab.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+    <div class="tab-content" id="page-tabs-content">
+    {% for tab in tabs %}
+      <div class="tab-pane fade{% if 1 == loop.index %} show active{% endif %}" id="{{ tab.id }}" role="tabpanel" aria-labelledby="{{ tab.id }}-tab">
+        {{ tab.content }}
+      </div>
+    {% endfor %}
+    </div>
+  {% endif %}
+  </section>
+{% endblock %}

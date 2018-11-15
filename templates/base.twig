@@ -9,49 +9,62 @@
 <body class="{{body_class}}" data-template="base.twig">
 	<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
 
-	<nav id="nav-main" class="nav-main navbar navbar-expand-lg navbar-light fixed-top" role="navigation">
-		<div class="container no-override">
-      <a class="navbar-brand" href="{{ site.url }}">
-        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-triadsemi_dark.800x411.png" class="d-none d-lg-inline mr-2" style="height: 54px;" />
-      </a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  {% include "nav.twig" %}
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
-				{% include "menu.twig" with {'menu': menu.get_items} %}
-			</div>
-		</div>
-	</nav><!-- #nav -->
-
-  <div class="header-hero">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-12 fadeInScaleDown">
-          <h2>
-            Spacial Header Light
-          </h2>
+  {% set backgroundimage = ( post.get_field('hero_image') )? TimberImage(post.get_field('hero_image')).src : fn('get_stylesheet_directory_uri') ~ '/images/feature_ts3633-and-dime.jpg' %}
+  <style type="text/css">
+  .page-header.background-img::after{
+    background: url({{ backgroundimage }});
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+  <div class="page-header background-img">
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          {% if post.get_field('link_to_parent') %}
+            {% set parent_id = fn('wp_get_post_parent_id',post.id) %}
+            <h4 class="linkparent"><a href="{{ fn('get_the_permalink',parent_id) }}" class=""><i class="ion-reply"></i> {{ fn('get_the_title',parent_id) }}</a></h4>
+            <h1>{{ post.title }}</h1>
+          {% else %}
+            <h1>{{ post.title }}</h1>
+            {% set tagline = post.get_field('tagline') %}
+            {% if tagline is not empty %}
+            <h4 class="tagline">{{ tagline }}</h4>
+            {% endif %}
+          {% endif %}
         </div>
       </div>
-    </div>
+    </section>
   </div>
 
+{% block content %}
 	<section id="content" role="main" class="content-wrapper container">
 		{% if title %}<h1>{{title}}</h1>{% endif %}
-		<div class="wrapper {{sidebar_class}}">
-			{% block content %}
-				Sorry, no content
-			{% endblock %}
-		</div>
-		{% if sidebar %}
-			<aside class="layout-sidebar">
-				{{sidebar}}
-			</aside>
-		{% endif %}
+    {% if sidebar %}
+    <div class="row">
+      <div class="col-8">
+        {{ post.content }}
+      </div>
+      <div class="col-4">
+        {{ sidebar }}
+      </div>
+    </div>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+    {% if page_nav %}
+    <div class="row">
+      <div class="col">{% if page_nav.prev_page_link is not empty %}<a href="{{ page_nav.prev_page_link }}">&larr; Previous: {{ page_nav.prev_page_title }}</a>{% endif %}</div>
+      <div class="col" style="text-align: right;">{% if page_nav.next_page_link is not empty %}<a href="{{ page_nav.next_page_link }}">Next: {{ page_nav.next_page_title }} &rarr;</a>{% endif %}</div>
+    </div>
+    {% endif %}
 	</section>
+{% endblock %}
 
 		{% block footer %}
-			<footer class="footer" id="footer">
+			<footer class="footer footer--light" id="footer">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}

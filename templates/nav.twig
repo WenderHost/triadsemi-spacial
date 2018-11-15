@@ -1,0 +1,14 @@
+  <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-transparent" id="nav-main"  role="navigation">
+    <div class="container no-override">
+      <a class="navbar-brand" href="{{ site.url }}">
+        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-triadsemi_light.800x411.png" class="d-none d-lg-inline mr-2" style="height: 51px;" />
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+        {% include "menu.twig" with {'menu': menu.get_items} %}
+      </div>
+    </div>
+  </nav><!-- #nav -->

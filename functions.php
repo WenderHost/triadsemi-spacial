@@ -38,5 +38,23 @@ Timber::$autoescape = false;
  */
 include_once('lib/classes/mysite.php');
 
+add_action( 'after_setup_theme', function(){
+  add_theme_support( 'woocommerce' );
+  //include_once('woocommerce.php');
+} );
+
+function timber_set_product( $post ) {
+    global $product;
+
+    if ( is_woocommerce() ) {
+        $product = wc_get_product( $post->ID );
+    }
+}
+
+add_editor_style( 'dist/theme.min.css' );
+
 //* Include functions
 include_once('lib/fns/enqueues.php');
+include_once('lib/fns/images.php');
+include_once('lib/fns/shortcodes.php');
+include_once('lib/fns/woocommerce.php');

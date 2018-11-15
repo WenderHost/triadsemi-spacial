@@ -1,6 +1,7 @@
 .statcard {
   &.statcard-primary {
-    background: #1997c6;
+    background: $triadpurple; /* #1997c6 */
+    background-image: linear-gradient(310deg,$triadpurple 0,$triadblue 90%);
     border-radius: 5px;
 
     .statcard-number {
