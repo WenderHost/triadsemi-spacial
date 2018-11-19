@@ -11,6 +11,7 @@
 
   {% include "nav.twig" %}
 
+{% block header %}
   {% set backgroundimage = ( post.get_field('hero_image') )? TimberImage(post.get_field('hero_image')).src : fn('get_stylesheet_directory_uri') ~ '/images/feature_ts3633-and-dime.jpg' %}
   <style type="text/css">
   .page-header.background-img::after{
@@ -38,6 +39,7 @@
       </div>
     </section>
   </div>
+{% endblock %}
 
 {% block content %}
 	<section id="content" role="main" class="content-wrapper container">

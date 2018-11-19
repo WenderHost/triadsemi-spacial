@@ -1,9 +1,10 @@
 .business-hero {
   background: url('#{$imagesPath}/unsplash/michael-benz-189971.jpg');
   background-size: cover;
-  background-position: center 0px;
-  min-height: 100vh;
-  padding-top: 220px;
+  background-position: center;
+  min-height: 70vh;
+  padding-top: 200px;
+  padding-bottom: 100px;
   overflow: hidden;
   position: relative;
 
@@ -29,7 +30,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(-45deg, rgba(63, 89, 118, 0.3) 0, rgba(14, 20, 34, 0.5) 80%);
+    background: linear-gradient(310deg, rgba($triadpurple,0.5), rgba($triadblue,0.3));
   }
 
   h2 {
@@ -159,7 +160,7 @@
           @include transform(scale3d(1.12, 1.12, 1.12));
         }
       }
-      
+
       .bg {
         border: none;
         position: absolute;

@@ -1,20 +1,20 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-
+<section id="content" role="main" class="content-wrapper container">
     {% do action('woocommerce_before_main_content') %}
 
     <div class="before-shop-loop">
         {% do action('woocommerce_before_shop_loop') %}
     </div>
 
-    <div class="loop">
+    <div class="loop row">
         {% for post in products %}
-            {% include ["partials/tease-product.twig"] %}
+            <div class="col-md-4">{% include ["woo/partials/tease-product.twig"] %}</div>
         {% endfor %}
     </div>
 
     {% do action('woocommerce_after_shop_loop') %}
     {% do action('woocommerce_after_main_content') %}
-
+</section>
 {% endblock  %}

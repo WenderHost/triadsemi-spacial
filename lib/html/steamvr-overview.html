@@ -1,0 +1,111 @@
+<p class="lead" style="margin-bottom: 60px;">Developed by Valve Corporation, SteamVR™ Tracking is a complete hardware and software system that lets objects determine, in real time, where they are located within a tracked 3D space. Valve has made SteamVR™ Tracking available to companies without licensing fees.</p>
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-6">
+    <h2>The SteamVR™ System</h2>
+    <p class="lead">The SteamVR™ Tracking system consists of three major blocks: Base stations that scan the room with infrared light, tracked objects, and a host PC to perform position calculations.</p>
+  </div>
+  <div class="col-6">
+    <img src="{themedir}/images/store/steamvr-system-diagram.1980x766-1.png" alt="SteamVR™ System Diagram" class="img-fluid" />
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-4">
+    <img src="{themedir}/images/store/base-station.800x600.jpg" alt="Base Station" class="img-fluid" />
+  </div>
+  <div class="col-8">
+    <h3>Base Station</h3>
+    <p>A tracked room has one or two base stations. Each base station outputs flashes of omni-directional infrared light along with swept planes of infrared laser light. The flash of IR light is called the Optical Sync and synchronizes all of the light to digital sensors in the room to time zero. Each sensor on a tracked object then waits to be scanned by the rotating plane of laser light. Since the sheet of laser light is rotating at a constant velocity, the angle from the base station to each light sensor can be computed by measuring the time from the sync light pulse (time zero) to the time when the plane of light hits the sensor. This sync and sweep process is repeated in the horizontal and vertical directions to provide a horizontal and vertical angle for each sensor on a tracked object.</p>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-4">
+    <img src="{themedir}/images/store/ts3633.800x600.jpg" alt="TS3633 Light to Digital Converter IC" class="img-fluid" />
+  </div>
+  <div class="col-8">
+    <h3>Tracked Object</h3>
+    <p>Tracked objects can have up to 32 TS4231 Light to Digital Converters. When base station IR light is incident on a site’s photodiode, that site’s TS4231 will output a digital pulse. The TS4231 can detect very low IR light levels in high noise environments. The output each light to digital detector is sent to a Watchman function that aggregates the sync and swept laser timings from all sensor locations. These light time stamps are then sent to the PC via a wired USB connection or a wireless Bluetooth link. Tracked objects can also contain an IMU to provide a fusion of tracking information back to the PC.</p>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 3rem;">
+  <div class="col-4">
+    <img src="{themedir}/images/store/steamvr-lighthouse.800x600.jpg" alt="Host PC" class="img-fluid" />
+  </div>
+  <div class="col-8">
+    <h3>Host PC</h3>
+    <p>The Host PC uses SteamVR™ software and the SteamVR™ API to compute the tracked object’s location. The PC software takes as input the time stamp reports for the up to 32 light-to-digital sensor inputs. These inputs are processed by a fitting engine that computes the object’s X,Y,Z location along with the rotation about the X,Y, and Z axis to deliver a real time pose of each object.</p>
+  </div>
+</div>
+
+<h2>Triad's Solutions for SteamVR™ Tracking</h2>
+
+<img src="{themedir}/images/store/steamvr-compatible-300x148.png" alt="SteamVR™ Compatible" class="align-right" style="width: 150px;">
+<p class="lead" style="margin-bottom: 60px;">Triad Semiconductor’s <a href="/products/steamvr-tracking/ts4231">TS4231 Light-to-Digital Converter (2nd Gen)</a> is an integral part of a SteamVR™ Tracking system. You can find more details below but in summary, a tracked object, in a SteamVR™ Tracking system, has a number of Triad’s TS4231 devices located on the object to detect infrared light from position basestations located in the room.</p>
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-4">
+    <img src="{themedir}/images/store/ts3633.600x600.jpg" alt="TS4231 Light to Digial IC (2nd Gen)" class="img-fluid" />
+  </div>
+  <div class="col-8">
+    <h3><a href="/product/ts4231">TS4231 Light to Digital IC (2nd Gen)</a></h3>
+    <p>Triad’s TS4231 Light-to-Digital Converter Integrated Circuit converts the SteamVR™ Tracking IR light into a digital signal indicating the angle of the sensor site from each tracking base station. The TS4231 is a size-optimized 9-bump WLCSP optimized for volume production and for small size and power.</p>
+    <a href="/product/ts4231" class="btn btn-primary">Find out more</a>
+  </div>
+</div>
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-4">
+    <img src="{themedir}/images/store/ts3633-next-to-a-dime.01.600x600.jpg" alt="TS3633-CM1" class="img-fluid" />
+  </div>
+  <div class="col-8">
+    <h3><a href="/product/ts3633-cm1">TS3633-CM1 Castellated Module</a></h3>
+    <p>The TS3633-CM1 is an excellent way to prototype SteamVR Tracking designs. The CM1 contains the TS3633 IC, a photodiode and the resistors and capacitors needed for a complete Light-to-Digital prototyping solution. The components are part of a PCB assembly with castellated pads on 100-mil centers to facilitate rapid prototyping of SteamVR Tracking solutions.</p>
+    <a href="/product/ts3633-cm1" class="btn btn-primary">Find out more</a>
+  </div>
+</div>
+<h2>SteamVR Tracking Applications</h2>
+<p class="lead">From room scale applications to console controllers and more, Triad's SteamVR hardware provides you with the tools and capability to build tomorrow's VR hardware today.</p>
+<div class="row">
+  <div class="col">
+    <ul>
+      <li>Complete Room-Scale Tracking Virtual Reality Systems</li>
+      <li>Adding room scale tracking to mobile VR devices</li>
+      <li>Adding room scale tracking to back-pack PC VR solutions</li>
+      <li>VR Head Mounted Display (HMD)</li>
+      <li>VR Game Controllers</li>
+      <li>Bracelets for tracking hand movements</li>
+      <li>Ankle bracelet for tracking feet</li>
+      <li>Belt for tracking waist and hips</li>
+      <li>Realistic weight track able guns</li>
+      <li>Collars for tracking your pets</li>
+      <li>Collars for tracking stuff animals and turning them into interactive VR pets</li>
+      <li>Indoor Precision GPS</li>
+      <li>Precise shopping cart location in grocery stores</li>
+      <li>Precision Drone control</li>
+      <li>Room scale plotter</li>
+      <li>Room scale 3D printer</li>
+      <li>Distance and angle measurement</li>
+      <li>Enhanced photogrammetry applications by knowing the precise orientation of the - camera when the picture was captured   </li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul>
+      <li>Industrial positioning</li>
+      <li>Precise control of a vacuuming or mopping robots</li>
+      <li>Precision room scale robotic control and positioning</li>
+      <li>Cup holder to locate your drink while in VR</li>
+      <li>VR tracked keyboard</li>
+      <li>Puck that can be attached to a wide variety of objects to track that objects position in VR</li>
+      <li>Phone case to locate your phone and answer it while in VR</li>
+      <li>Drone plus camera with SteamVR tracking for precision repeatable scene filming and flybys</li>
+      <li>Precisely tracked golf club</li>
+      <li>VR sports controllers</li>
+      <li>VR Wallpaper solutions where a SteamVR tracking shell is overlaid on top of an existing product</li>
+      <li>Hand gun training</li>
+      <li>White board marker holder to turn a white board in a SteamVR tracked space into a recording smart board</li>
+    </ul>
+  </div>
+</div>

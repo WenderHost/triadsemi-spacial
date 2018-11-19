@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block header %}
+  {% set featureimage = ( post.thumbnail.src('full') ) ? post.thumbnail.src('full') : fn('get_stylesheet_directory_uri') ~ '/images/unsplash/michael-benz-189971.jpg' %}
+  <div class="business-hero" style="background-image: url({{ featureimage }})">
+      <div class="container">
+        {% if post.content is not empty %}
+          {{ post.content }}
+        {% else %}
+          <h2 class="customFadeInUp">No content found!</h2>
+          <p>Add content to this section by adding content to this page.</p>
+        {% endif %}
+      </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% if modules %}
+    {% for module in modules %}
+      <div class="modular{% if module.class %} {{ module.class }}{% endif %}"{% if module.style %} style="{{ module.style }}"{% endif %}>
+        <section class="container">
+          {{ module.content }}
+        </section>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

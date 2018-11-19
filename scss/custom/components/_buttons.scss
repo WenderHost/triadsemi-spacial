@@ -1,10 +1,31 @@
+.btn-triadblue{
+  @include bootstrap-button($triadblue);
+}
+.btn-triadpurple{
+ @include bootstrap-button($triadpurple);
+}
+.btn-triadyellow{
+ @include bootstrap-button($triadyellow);
+
+ &.btn-lg{
+  border-color: #fff;
+  border-width: 2px;
+  color: $triadblue;
+  font-weight: bold;
+
+   &:hover{
+    background-color: #fff;
+   }
+ }
+}
+
 .btn-outline-secondary {
   color: #9c9c9c;
 }
 
 .btn-pill {
   color: #fff;
-  display: inline-block;  
+  display: inline-block;
   text-decoration: none;
   font-size: 15px;
   padding: 10px 27px;
@@ -24,7 +45,7 @@
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
   }
 
-  // sizes 
+  // sizes
 
   &.btn-pill-lg {
     font-size: 16px;

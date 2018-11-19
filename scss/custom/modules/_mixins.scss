@@ -51,7 +51,7 @@
     -moz-transition: -moz-#{$property} #{$values};
     -ms-transition: -ms-#{$property} #{$values};
     -o-transition: -o-#{$property} #{$values};
-    transition: #{$property} #{$values};	
+    transition: #{$property} #{$values};
 }
 
 @mixin background-gradient($from, $to) {
@@ -82,7 +82,7 @@
   &::-webkit-input-placeholder {@content}
   &:-moz-placeholder           {@content}
   &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}  
+  &:-ms-input-placeholder      {@content}
 }
 
 @mixin animation($animations) {
@@ -132,3 +132,66 @@
 	}
 }
 
+
+/* Added by MWENDER */
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  &:focus, &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+  &:active, &.active, .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+
+    &:hover, &:focus, &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+      border-color: darken($border, 25%);
+    }
+  }
+  &:active, &.active, .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &:focus, &.focus, &:active, &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+@mixin gradient-triad-blues{
+  background: #00aaec; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #00aaec 0%, #2b3695 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#00aaec), color-stop(100%,#2b3695)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #00aaec 0%,#2b3695 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #00aaec 0%,#2b3695 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #00aaec 0%,#2b3695 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #00aaec 0%,#2b3695 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aaec', endColorstr='#2b3695',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+// Mixin to create a bootstrap button with custom colors
+@mixin bootstrap-button($background) {
+  $color: #fff;
+  $border: 5%;
+  @if (lightness($background) >= lightness(#aaa)) {
+    $color: #333;
+    $border: .2 * lightness($background);
+  }
+  @include button-variant($color, $background, darken($background, $border));
+}
