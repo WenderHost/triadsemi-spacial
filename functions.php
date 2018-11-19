@@ -57,4 +57,5 @@ add_editor_style( 'dist/theme.min.css' );
 include_once('lib/fns/enqueues.php');
 include_once('lib/fns/images.php');
 include_once('lib/fns/shortcodes.php');
+include_once('lib/fns/sidebars.php');
 include_once('lib/fns/woocommerce.php');
