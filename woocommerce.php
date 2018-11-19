@@ -50,45 +50,10 @@ if ( is_singular( 'product' ) ) {
       // If not quantity or discount, break the loop
       if( empty( $quantity ) || empty( $discount ) )
         break;
-      //$bulk_discounts[$x] = ['quantity' => $quantity, 'discount' => get_woocommerce_currency_symbol() . number_format( $default_price - $discount, 2 ) ];
+
       $bulk_discounts[$x] = ['quantity' => $quantity, 'discount' => $discount ];
     }
     $context['bulk_discounts'] = $bulk_discounts;
-
-    /*
-    $row_format = '<tr><td>%1$s</td><td></td><td>%2$s</td></tr>';
-    $rows = [];
-    // Add default pricing
-    $minimum = get_post_meta( $post->ID, '_wpbo_minimum', true );
-    $default_quantity = ( ! empty( $minimum ) )? $minimum : '1';
-    $minimum_increment = ( $wpbo_step = get_post_meta( $post->ID, '_wpbo_step', true ) )? $wpbo_step : 1;
-    if( $minimum != ( $bulk_discounts[1]['quantity'] - $minimum_increment ) ){
-      $default_quantity.= ' - ' . ( $bulk_discounts[1]['quantity'] - $minimum_increment );
-    }
-
-    $bulk_discounts[0] = ['quantity' => $default_quantity, 'discount' => get_woocommerce_currency_symbol() . $default_price ];
-    ksort( $bulk_discounts );
-    $count_discounts = count( $bulk_discounts );
-    $bulk_discounts_table = '';
-    foreach( $bulk_discounts as $key => $data ){
-      if( $key > 0 ){
-        $next_key = $key + 1;
-        if( $key < ( $count_discounts - 1 ) ){
-          $quantity = $data['quantity'] . ' - ' . ( $bulk_discounts[$next_key]['quantity'] - $minimum_increment );
-        } else if( $key == ( $count_discounts - 1 ) ){
-          $quantity = $data['quantity']. '+';
-        } else {
-          $quantity = $data['quantity'];
-        }
-      } else {
-        $quantity = $data['quantity'];
-      }
-      $rows[] = sprintf( $row_format, $quantity, $data['discount'] );
-    }
-    $rows = implode( '', $rows );
-    $bulk_discounts_table.= '<table class="bulk-discounts-table table"><thead><tr><th>Price Break</th><th>Unit Price</th><th>Extended Price</th></tr></thead><tbody>' . $rows . '</tbody></table>';
-    $context['bulk_discounts_table'] = $bulk_discounts_table;
-    /**/
   }
 
   // Restore the context and loop back to the main query loop.
@@ -98,6 +63,7 @@ if ( is_singular( 'product' ) ) {
 } else {
     $posts = Timber::get_posts();
     $context['products'] = $posts;
+    $context['post']['title'] = 'Products';
 
     if ( is_product_category() ) {
         $queried_object = get_queried_object();
