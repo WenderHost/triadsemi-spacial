@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="container content-wrapper">
+    {% if engineering_expertise is not empty %}
+    <table id="engineering-expertise" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Sub-category</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in engineering_expertise %}
+        <tr>
+          <td>{{ row.category }}</td>
+          <td>{{ row.subcategory }}</td>
+          <td>{{ row.description }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Category</th>
+          <th>Sub-category</th>
+          <th>Description</th>
+        </tr>
+      </tfoot>
+    </table>
+    {% endif %}
+  </div><!-- /content-wrapper -->
+{% endblock %}

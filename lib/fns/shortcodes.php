@@ -1,4 +1,13 @@
 <?php
+/**
+ * Shortcodes defined below:
+ *
+ * - [icon] - Returns HTML markup for icons
+ * - [include] - Includes files for display
+ * - [listchildren] - Returns a list of child pages
+ * - [productline] - Displays products from a WooCommerce category
+ * - [wcmsg] - Displays conditional messages in the WooCommerce shopping cart
+ */
 
 namespace TriadSemiSpacial\shortcodes;
 
@@ -87,6 +96,91 @@ function include_file( $atts ){
   return $return;
 }
 add_shortcode( 'include', __NAMESPACE__ . '\\include_file' );
+
+function list_children( $atts ){
+  $args = shortcode_atts( [
+    'foo' => 'bar',
+  ], $atts );
+
+  global $post;
+
+  $children = get_pages([
+    'sort_order'    => 'ASC',
+    'sort_column'   => 'menu_order',
+    'parent'        => $post->ID,
+    'hierarchical'  => false,
+  ]);
+
+  if( $children ){
+    foreach ($children as $page ) {
+      $child_list[] = '<a href="' . get_permalink( $page->ID ) . '">' . get_the_title( $page->ID ) . '</a>';
+    }
+    return '<ul><li>' . implode( '</li><li>', $child_list ) . '</li></ul>';
+  } else {
+    return '<ul><li>No children found for this page.</li></ul>';
+  }
+}
+add_shortcode( 'listchildren', __NAMESPACE__ . '\\list_children' );
+
+/**
+ * [productline] shortcode
+ *
+ * @param      <type>  $atts   The atts
+ */
+function product_line( $atts ){
+  $args = shortcode_atts([
+    'foo'       => 'bar',
+    'category'  => null,
+    'tag'       => null,
+    'title'     => null,
+  ], $atts );
+
+  if( stristr( $args['category'], ',' ) )
+    $args['category'] = explode( ',', $args['category'] );
+
+  if( ! is_array( $args['category'] ) )
+    $args['category'] = [$args['category']];
+
+  if( stristr( $args['tag'], ',' ) )
+    $args['tag'] = explode( ',', $args['tag'] );
+
+  if( ! is_array( $args['tag'] ) )
+    $args['tag'] = [$args['tag']];
+
+  $title = ( is_null( $args['title'] ) )? implode( ', ', $args['category'] ) . ' Products' : $args['title'] ;
+
+  $product_ids = wc_get_products([
+    'limit'     => -1,
+    'orderby'   => 'title',
+    'order'     => 'ASC',
+    'return'    => 'ids',
+    'category'  => $args['category'],
+    'tag'       => $args['tag'],
+  ]);
+  if( $product_ids ){
+    foreach ( $product_ids as $id ) {
+      $products[] = [
+        'permalink' => get_permalink( $id ),
+        'title'     => get_the_title( $id ),
+        'thumbnail' => get_the_post_thumbnail_url( $id, 'thumbnail' ),
+      ];
+    }
+  } else {
+    $products[] = [
+      'permalink' => '#',
+      'title'     => 'No products found',
+      'thumbnail' => 'https://via.placeholder.com/600&text=Placeholder',
+    ];
+  }
+
+  $context = \Timber::get_context();
+  $context['title'] = $title;
+  $context['products'] = $products;
+
+  $html = \Timber::compile( ['partial/product-line.twig'], $context );
+  return $html;
+}
+add_shortcode( 'productline', __NAMESPACE__ . '\\product_line' );
 
 /**
  * Displays an info box, but WooCommerce must be installed and

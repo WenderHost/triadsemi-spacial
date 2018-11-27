@@ -7,45 +7,54 @@
       <div class="row">
         <div class="col-md-8">
           <h3>Product Description</h3>
-          {{post.content}}
+          {{ post.content }}
         </div>
         <div class="col-md-4">
           {% do action('woocommerce_before_single_product_summary') %}
           {% if post.thumbnail %}
-            <img class="img-fluid rounded" src="{{ post.thumbnail.src|resize(shop_thumbnail_image_size) }}" />
+            <img class="img-fluid rounded" style="margin-bottom: .25rem;" src="{{ post.thumbnail.src|resize(shop_thumbnail_image_size) }}" />
           {% endif %}
-          {% do action('woocommerce_single_product_summary') %}
-          {% if bulk_discounts is not empty %}
-            <table class="table table-sm table-striped">
-              <thead>
-                <tr>
-                  <th style="font-size: 14px;">Price Break</th>
-                  <th style="font-size: 14px;">Unit Price</th>
-                  <th style="text-align: right; font-size: 14px;">Extended Price</th>
-                </tr>
-              </thead>
-              <tbody>
-              {% for discount in bulk_discounts %}
-                {% set unitprice = baseprice - discount.discount %}
-                <tr>
-                  <td>{{ discount.quantity }}+</td>
-                  <td>{{ unitprice|number_format(2) }}</td>
-                  <td style="text-align: right;">${{ (discount.quantity * unitprice)|number_format(2) }}</td>
-                </tr>
-              {% endfor %}
-              </tbody>
-            </table>
+          {% if coming_soon %}
+            <button type="button" class="btn btn-secondary btn-block" style="margin: 1rem 0;"><i class="entypo-new"></i> Coming Soon!</button>
+          {% else %}
+            {% do action('woocommerce_single_product_summary') %}
+            {% if bulk_discounts is not empty %}
+              <table class="table table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th style="font-size: 14px;">Price Break</th>
+                    <th style="font-size: 14px;">Unit Price</th>
+                    <th style="text-align: right; font-size: 14px;">Extended Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for discount in bulk_discounts %}
+                  {% set unitprice = baseprice - discount.discount %}
+                  <tr>
+                    <td>{{ discount.quantity }}+</td>
+                    <td>{{ unitprice|number_format(2) }}</td>
+                    <td style="text-align: right;">${{ (discount.quantity * unitprice)|number_format(2) }}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            {% endif %}
           {% endif %}
+          <hr style="clear: both;" />
           {% set documents = post.get_field('documents') %}
           {% if documents is not empty %}
             <h4>Related Information</h4>
-            <ul style="padding-left: 20px">
+            <ul>
             {% for file in documents %}
               {% set url = fn('wp_get_attachment_url',file.files) %}
               {% set file = fn('get_post',file.files) %}
               <li><a href="{{ url }}" target="_blank"><i class="fa fa-file-text"></i> {{ file.post_title }}</a></li>
             {% endfor %}
             </ul>
+          {% endif %}
+          {% set additional_info = post.get_field('additional_info') %}
+          {% if additional_info is not empty %}
+            {{ additional_info }}
           {% endif %}
         </div>
       </div>

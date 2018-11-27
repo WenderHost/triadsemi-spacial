@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <section id="content" role="main" class="content-wrapper container">
+    <div class="row" style="margin-bottom: 2rem;">
+      <div class="col-md-6">
+        <h3>Description</h3>
+        {{ post.content }}
+      </div>
+      <div class="col-md-6">{{ listing_details }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">{{ contact_info }}</div>
+    </div>
+  </section>
+{% endblock %}

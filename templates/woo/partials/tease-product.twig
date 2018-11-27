@@ -1,14 +1,21 @@
-<div {{ fn('post_class', ['entry','card'] ) }}>
-
   {{ fn('timber_set_product', post) }}
 
   {% set title = ( post.title )? post.title : fn('the_title') %}
   {% set thumbnail = ( post.thumbnail )? post.thumbnail.src|resize(post_thumb_size[0], post_thumb_size[1]) : 'https://via.placeholder.com/800' %}
-  <a href="{{ post.link }}"><img class="card-img-top img-fluid" src="{{ thumbnail }}" /></a>
-  <div class="card-body">
-    {% do action('woocommerce_before_shop_loop_item_title') %}
-    <h3 class="card-title" style="font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"><a href="{{ post.link }}">{{ title }}</a></h3>
-    {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
-    {% do action( 'woocommerce_after_shop_loop_item' ) %}
-  </div>
-</div>
+  <a href="{{ post.link }}" class="post">
+    <div class="post-wrapper">
+      <div class="post-bg" style="{% if thumbnail %}background-image: url('{{ thumbnail }}'); background-size: auto 100%; background-position: center;{% endif %}"></div>
+      <div class="post-intro">
+        {#% do action('woocommerce_before_shop_loop_item_title') %#}
+        <div class="post-title">
+          {{ title | excerpt(12) }}
+        </div>
+        {#% do action( 'woocommerce_after_shop_loop_item_title' ) %#}
+        <p class="post-description">
+          {{ post.content | excerpt(12) }}
+        </p>
+
+        {#% do action( 'woocommerce_after_shop_loop_item' ) %#}
+      </div>
+    </div>
+  </a>

@@ -1,0 +1,15 @@
+<div class="product-line" style="margin-bottom: 2rem;">
+  <div class="row">
+    <div class="col-md-12">
+      <h5 class="title">{{ title }}</h5>
+    </div>
+  </div>
+  <div class="row">
+    {% for product in products %}
+      <div class="col-md-2">
+        <a href="{{ product.permalink }}" style="display: block; margin-bottom: .5rem;"><img src="{{ product.thumbnail }}" class="img-fluid" /></a>
+        <a href="{{ product.permalink }}">{{ product.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

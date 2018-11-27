@@ -1,7 +1,9 @@
-  <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-transparent" id="nav-main"  role="navigation">
+{% set is_blog_page = is_blog_page() %}
+{% set nav_classes = ( is_blog_page )? 'navbar-light' : 'navbar-dark bg-transparent' %}
+  <nav class="nav-main navbar navbar-expand-lg {{ nav_classes }}" id="nav-main"  role="navigation">
     <div class="container no-override">
       <a class="navbar-brand" href="{{ site.url }}">
-        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-triadsemi_light.800x411.png" class="d-none d-lg-inline mr-2" style="height: 51px;" />
+        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-triadsemi_{% if is_blog_page %}dark{% else %}light{% endif %}.800x411.png" class="d-none d-lg-inline mr-2" style="height: 51px;" />
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
         <span class="navbar-toggler-icon"></span>

@@ -1,5 +1,26 @@
 {% extends "base.twig" %}
 
+{% block header %}
+  <style type="text/css">
+  .page-header.background-img::after{
+    background: url({{ fn('get_stylesheet_directory_uri') ~ '/images/feature_ts3633-and-dime.jpg' }});
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+  <div class="page-header background-img">
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <h1>Not found</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+  <div class="content-wrapper container">
+  	<p>Sorry, we couldn't find what you're looking for.</p>
+  </div>
 {% endblock %}

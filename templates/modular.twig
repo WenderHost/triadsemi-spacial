@@ -1,6 +1,5 @@
 {% extends "base.twig" %}
 
-
 {% block header %}
   {% if post.content is not empty %}
     {% set featureimage = ( post.thumbnail.src('full') ) ? post.thumbnail.src('full') : fn('get_stylesheet_directory_uri') ~ '/images/unsplash/michael-benz-189971.jpg' %}
@@ -13,7 +12,6 @@
     {{ parent() }}
   {% endif %}
 {% endblock %}
-
 
 {% block content %}
   {% if modules %}

@@ -44,6 +44,12 @@
 {% block content %}
 	<section id="content" role="main" class="content-wrapper container">
 		{% if title %}<h1>{{title}}</h1>{% endif %}
+    {% if page_nav %}
+    <div class="row page-nav top">
+      <div class="col">{% if page_nav.prev.link is not empty %}<a href="{{ page_nav.prev.link }}">&larr; Previous: {{ page_nav.prev.title }}</a>{% endif %}</div>
+      <div class="col" style="text-align: right;">{% if page_nav.next.link is not empty %}<a href="{{ page_nav.next.link }}">Next: {{ page_nav.next.title }} &rarr;</a>{% endif %}</div>
+    </div>
+    {% endif %}
     {% if sidebar %}
     <div class="row">
       <div class="col-8">
@@ -57,9 +63,9 @@
       {{ post.content }}
     {% endif %}
     {% if page_nav %}
-    <div class="row">
-      <div class="col">{% if page_nav.prev_page_link is not empty %}<a href="{{ page_nav.prev_page_link }}">&larr; Previous: {{ page_nav.prev_page_title }}</a>{% endif %}</div>
-      <div class="col" style="text-align: right;">{% if page_nav.next_page_link is not empty %}<a href="{{ page_nav.next_page_link }}">Next: {{ page_nav.next_page_title }} &rarr;</a>{% endif %}</div>
+    <div class="row page-nav bottom">
+      <div class="col">{% if page_nav.prev.link is not empty %}<a href="{{ page_nav.prev.link }}">&larr; Previous: {{ page_nav.prev.title }}</a>{% endif %}</div>
+      <div class="col" style="text-align: right;">{% if page_nav.next.link is not empty %}<a href="{{ page_nav.next.link }}">Next: {{ page_nav.next.title }} &rarr;</a>{% endif %}</div>
     </div>
     {% endif %}
 	</section>
@@ -67,7 +73,7 @@
 
 		{% block footer %}
 			<footer class="footer footer--light" id="footer">
-				{% include 'footer.twig' %}
+				{% include 'footer.twig' with {'links': footer_links.get_items} %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}

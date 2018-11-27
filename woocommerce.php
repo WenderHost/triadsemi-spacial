@@ -14,7 +14,8 @@ if ( is_singular( 'product' ) ) {
   $product              = wc_get_product( $context['post']->ID );
   $context['product']   = $product;
   $context['baseprice'] = $product->get_price();
-  error_log('$product->get_price() = ' . $product->get_price() );
+  $coming_soon = get_field('coming_soon');
+  $context['coming_soon'] = ( isset( $coming_soon[0] ) )? $coming_soon[0] : false ;
 
   // Get related products
   $related_limit               = wc_get_loop_prop( 'columns' );
@@ -63,7 +64,8 @@ if ( is_singular( 'product' ) ) {
 } else {
     $posts = Timber::get_posts();
     $context['products'] = $posts;
-    $context['post']['title'] = 'Products';
+    //$context['post']['title'] = 'Products';
+    $context['post']      = Timber::get_post( get_option( 'woocommerce_shop_page_id' ) );
 
     if ( is_product_category() ) {
         $queried_object = get_queried_object();

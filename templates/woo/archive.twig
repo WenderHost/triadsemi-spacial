@@ -1,20 +1,30 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-<section id="content" role="main" class="content-wrapper container">
-    {% do action('woocommerce_before_main_content') %}
+  <div class="blog-cols-header">
+    <div class="container">
+      {#% do action('woocommerce_before_main_content') %#}
 
-    <div class="before-shop-loop">
-        {% do action('woocommerce_before_shop_loop') %}
+      <div class="before-shop-loop">
+          {#% do action('woocommerce_before_shop_loop') %#}
+      </div>
+
+      {% if post.content is not empty %}
+      <div class="row">
+          <div class="col-12">{{ post.content }}</div>
+      </div>
+      {% endif %}
     </div>
+  </div>
 
-    <div class="loop row">
-        {% for post in products %}
-            <div class="col-md-4">{% include ["woo/partials/tease-product.twig"] %}</div>
-        {% endfor %}
+  <!--<div class="blog-cols-wrapper">
+    <div class="container">
+      {#% for post in products %}
+        {% include ['woo/partials/tease-product.twig', 'tease.twig'] %}
+      {% endfor %#}
     </div>
+  </div>-->
 
-    {% do action('woocommerce_after_shop_loop') %}
-    {% do action('woocommerce_after_main_content') %}
-</section>
+  {#% do action('woocommerce_after_shop_loop') %#}
+  {#% do action('woocommerce_after_main_content') %#}
 {% endblock  %}

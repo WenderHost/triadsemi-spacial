@@ -1,0 +1,10 @@
+[
+  ["ASIC Development Activity","Triad Reconfigurable ASICs (cost)","Others - Traditional full-custom Only ASICs (cost)"],
+  ["Design & Verification","$400,000","$400,000"],
+  ["Fabrication 1","",""],
+  ["Rework 1","","$100,000"],
+  ["Fabrication 2","","$100,000"],
+  ["Rework 2","$20,000","$50,000"],
+  ["Fabrication 3*","$30,000","$150,000*"],
+  ["Time-to-Market (start to production)","$400K – $450K (33%-44% savings)","$600K – $800K"]
+]

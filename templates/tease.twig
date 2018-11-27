@@ -1,9 +1,18 @@
-<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
-	{% block content %}
-		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.preview}}</p>
-		{% if post.get_thumbnail %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
-	{% endblock %}
-</article>
+
+  <a href="{{ post.link }}" class="post">
+    <div class="post-wrapper">
+      <div class="post-bg" style="{% if post.thumbnail %}background: #00aaec url('{{ post.thumbnail.src('blogthumbnail') }}') no-repeat;{% endif %}">
+      </div>
+      <div class="post-intro">
+        <div class="post-title">
+          {{ post.title | excerpt(3) }}
+        </div>
+        <div class="post-min-read">
+          {{ reading_time(post.content) }} read
+        </div>
+        <p class="post-description">
+          {{ post.content | excerpt(10) }}
+        </p>
+      </div>
+    </div>
+  </a>

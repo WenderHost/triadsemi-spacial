@@ -1,11 +1,27 @@
 {% extends "base.twig" %}
 
+{% block header %}
+{% endblock %}
+
 {% block content %}
-	<h2>{{ foo }}</h2>
-	<p>{{ qux }}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
-	
+  <div class="blog-cols-header">
+    <div class="container">
+      <h1>
+        Get the latest thoughts & news
+      </h1>
+      <p>
+        Latest updates, projects and interesting news from our company
+      </p>
+    </div>
+  </div>
+
+  <div class="blog-cols-wrapper">
+    <div class="container">
+      {% for post in posts %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+      {% endfor %}
+    </div>
+  </div>
+
 	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 {% endblock %}

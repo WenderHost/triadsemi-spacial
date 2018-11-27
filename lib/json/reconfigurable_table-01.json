@@ -1,0 +1,10 @@
+[
+  ["ASIC Development Activity","Triad Reconfigurable ASICs (weeks)","Others – Traditional full-custom Only ASICs (weeks)"],
+  ["Design & Verification",20,24],
+  ["Fabrication 1",12,  12],
+  ["Rework 1",4, 11],
+  ["Fabrication 2", "4 (via mask only)", "12 (full mask)"],
+  ["Rework 2",3,10],
+  ["Fabrication 3",4,12],
+  ["Time-to-Market (start to production)","47 weeks (11 months)","81 weeks(19 months)"]
+]

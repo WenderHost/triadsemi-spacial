@@ -1,0 +1,1342 @@
+[
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - fully differential, 100kHz unity gain bandwidth, low power: 300nA Bias, total Q current of 2uA",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - fully differential, 10-20MHz unity gain bandwidth",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - fully differential, 20Mhz unity gain bandwidth",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - fully differential, 1GHz unity gain bandwidth",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - fully differential, 200MHz unity gain bandwidth, low power",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - wideband, differential, 200MHz unity gain bandwidth",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - differential to single ended conversion",
+    "subcategory": "Fully Differential Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - high voltage, 20V output, 10MHz unity gain bandwidth",
+    "subcategory": "High Voltage Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "LNA, 5µW, 3.3V, Noise < 10µV (10-150Hz)",
+    "subcategory": "Low Noise Amplifiers (LNA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "LNA, Noise < 6nV/rt-Hz @ 500MHz, Noise < 4nV/rt-Hz @ 1GHz",
+    "subcategory": "Low Noise Amplifiers (LNA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "LNA, Noise <100nV/rt-Hz @ 1kHz",
+    "subcategory": "Low Noise Amplifiers (LNA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "LNA, 5nV/rt-Hz @ 1kHz, 5MHz unity gain bandwidth",
+    "subcategory": "Low Noise Amplifiers (LNA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - current mirror OTAs for switched capacitor circuits",
+    "subcategory": "Operational Transimpedance Amplifiers (OTA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 0.5 to 15MHz unity gain bandwidth",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 0.5 to 15MHz unity gain bandwidth",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 2MHz unity gain bandwidth, 2 stage",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 5MHz unity gain bandwidth, low power",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, folded cascode for capacitive load driver, wide output swing (3.3V rail)",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 10MHz unity gain bandwidth",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 12MHz unity gain bandwidth, folded cascode",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 20MHz unity gain bandwidth",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 20MHz unity gain bandwidth, Constant gm, rail-to-rail",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - single ended, 30MHz unity gain bandwidth, 20V output",
+    "subcategory": "Single-Ended Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - low power, 200MHz unity gain bandwidth",
+    "subcategory": "Transimpedence Amplifiers (TIA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - high speed, 800MHz unity gain bandwidth, for ADCs, folded cascode",
+    "subcategory": "Transimpedence Amplifiers (TIA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - high speed, 800MHz unity gain bandwidth, telescope-design, high-speed",
+    "subcategory": "Transimpedence Amplifiers (TIA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - high speed, 800MHz unity gain bandwidth, telescope-design, high-speed",
+    "subcategory": "Transimpedence Amplifiers (TIA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - output swing, 350MHz unity gain bandwidth, 2 stage for low power ADC (12b),",
+    "subcategory": "Transimpedence Amplifiers (TIA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "OTA - high speed, 800MHz unity gain bandwidth, telescope-design, high-speed",
+    "subcategory": "Transimpedence Amplifiers (TIA)"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - wideband, single ended, 100MHz unity gain bandwidth",
+    "subcategory": "Wideband Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - wideband, single ended, 200MHz unity gain bandwidth, folded cascode, low-power, rail-to-rail",
+    "subcategory": "Wideband Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - wideband, single ended, 600MHz unity gain bandwidth - 70dB gain 1.1V operation",
+    "subcategory": "Wideband Operational Amplifiers"
+  },
+  {
+    "category": "Operational Amplifiers",
+    "description": "Op Amp - wideband, 1GHz unity gain bandwidth",
+    "subcategory": "Wideband Operational Amplifiers"
+  },
+  {
+    "category": "Filters",
+    "description": "Bi-quad filters",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Tunable LC bandpass filter - 3 and 4 stage LC coupled resonator filters with 10% bandwidth and octave tuning range",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Anti-alias, anti-image filters - 10kHz to 10MHz operation",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Active RC filters (1st - 3rd order)",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Active 2nd order Butterworth, 1MHz input",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Active RC, 10MHz bandwidth",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Continuous time filters, anti-aliasing 1MHz range",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "2nd order opamp filters for wireless land (12MHz bandwidth)",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Loop filters for PLLs",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Passive filters, 1st & 2nd order, < 1MHz",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Active filters, 1st & 2nd order, < 1MHz",
+    "subcategory": "Continuous Time Filters (Active or Passive)"
+  },
+  {
+    "category": "Filters",
+    "description": "Sigma delta, switch capacitor filter - 4-20kHz cutoff frequency, 2nd order",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "Switched capacitor 4th order filter (implemented as 2 biquads)",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "Switched capacitor 8th order bandpass filter",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "Switched capacitor 2nd order filter",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "Switched capacitor filters, 2nd order, telephony range (3kHz-20kHz), low-pass, band-pass, band-reject",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "Switched capacitor ladder filter, 11th order, wireless analog speech scrambler",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "Continuous amplitude, discrete time FIR",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "N-Path switched capacitor filters, 3kHz to 20kHz",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Filters",
+    "description": "N-Path switched capacitor filter, 62.5MHz (SIF)",
+    "subcategory": "Discrete Time Filters (switched capacitor)"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Analog Front End (AFE)",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Audio Processing",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Audio Scrambling",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Tone Detection",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "MSK 1200-9600 baud modem",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor integrator",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor programmable gain amplifier",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor TIA",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Sample & Hold (S/H) - 10 us acquisition time, 250KHz integrator",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor speech compander - switched capacitor delta sigma modulator",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor CVSD continuously variable slope delta modulator",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor amplifier, 40dB gain over audio band",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor modulator (double balanced modulator in the audio band)",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor integrator",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor differentiators (200KHz) capacitor sense",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Switched capacitor gain amplifiers (1MHz) Gain 0.5x to 100x",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Delta sigma modulator - single-ended 1st order",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Switched Capacitor Circuits",
+    "description": "Delta sigma modulator - differential 2nd order",
+    "subcategory": "Switched Capacitor Circuits"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, 10-bit, 4th order modulator, 64MHz clock, 4MSPS",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, 1st order sigma delta modulator, continuous time",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, low-power, single-reference voltage for telephony (4kHz)",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - application specific bandpass delta sigma for 10kHz to 30kHz with 12-bit resolution",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, 14-bit ENOB, 2nd order, 2MHz clk, 1kHz BW",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, 14-bit ENOB, 2MHz clock, 4kHz analog bandwidth",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, 14-bit, nyquist output of 20KSPS",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Sigma delta, 16-bit, 15.5-bit ENOB 2nd-order, 400SPS",
+    "subcategory": "Sigma Delta ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 12-bit, 10KSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 5-bit temperature sensor",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 10-bit, capacitive, 50KSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 8-bit, 3MSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR 10-bit, 3MSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 7-bit, 1KSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 12-bit, 20KSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 8-bit, 500KSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - SAR, 10-bit, 500KSPS",
+    "subcategory": "Successive Approximation Register (SAR) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Pipelined - 12-bit ENOB, 70MSPS",
+    "subcategory": "Pipelined ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Pipelined - 12-bit, 100KSPS",
+    "subcategory": "Pipelined ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Pipelined - 10-bit, 50MSPS",
+    "subcategory": "Pipelined ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Pipelined - programmable 8, 10, 12-bit ADC with low-power using shared amplifier approach, 20MSPS",
+    "subcategory": "Pipelined ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - Pipelined - 10bit, 10MSPS - async sampling ADC optimized for pulse detection apps",
+    "subcategory": "Pipelined ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "Sampled IF ADC 14-bit, 125MSPS ADC",
+    "subcategory": "Sampled IF (SIF) ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "Flash ADC - 5bits, 40MSPS",
+    "subcategory": "Flash ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "Flash ADC - 4-bits as temperature sensor, 8-bits time to digital converter",
+    "subcategory": "Flash ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "Flash ADC - 5bits, 100MSPS",
+    "subcategory": "Flash ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "Flash ADC - 6-bit, 2MSPS for calibration",
+    "subcategory": "Flash ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - dual slope, 10-bit, 16-channel, 3.3V operation",
+    "subcategory": "Dual-Slope ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - current slope, 12-bit, 320-channel, 3.3V operation",
+    "subcategory": "Dual-Slope ADCs"
+  },
+  {
+    "category": "Analog to Digital Converters",
+    "description": "ADC - single slope capacitive to digital converter",
+    "subcategory": "Dual-Slope ADCs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 4-5-bit, R2R ladder",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 5b, 52MSPS - tapped resistor",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 6-bit, programmable V to I converter",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 6-bit, reference tapped resistor",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 6-8-bit calibration DACs",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 8-bit, R2R DAC, 25MSPS",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 8-bit, R2R ladder reference",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 8-bit, R2R ladder",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 10-bit, R2R ladder",
+    "subcategory": "Resistive DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 6-bit resistor, 6-bit capacitor, 1MSPS",
+    "subcategory": "Segmented DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "DAC - 12b, 128KSPS",
+    "subcategory": "Segmented DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "CS DAC - 6b, 40MSPS",
+    "subcategory": "Current Steering DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "CS DAC - 8-bit, 100MSPS",
+    "subcategory": "Current Steering DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "CS DAC - 6-8bit, calibration and LED driver control",
+    "subcategory": "Current Steering DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "CS DAC 10-bit, 500MSPS up to 500uA, 90nm TSMC",
+    "subcategory": "Current Steering DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "CS DAC - 12-bit, 6-bit resistor, 6-bit capacitor, 1MSPS",
+    "subcategory": "Current Steering DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "CS DAC - 12-bit, 100MSPS",
+    "subcategory": "Current Steering DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "SC DAC - switched capacitor - 9-bit",
+    "subcategory": "Switched Capacitor DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "SC DAC - sigma delta DAC, telephony (4kHz band), 86dB SNR",
+    "subcategory": "Switched Capacitor DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "SC DAC - charge balancing, 10-bit, 10nS setting time, 2MHz signal bandwidths",
+    "subcategory": "Switched Capacitor DACs"
+  },
+  {
+    "category": "Digital to Analog Converters",
+    "description": "PWM DAC",
+    "subcategory": "PWM"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "PLL - 320MHz, 50ps peak-peak jitter, 25uA IDD",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "PLL - Integer N / Fractional N and delta sigma for GPS, DBM and WCDMA",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Wideband amplifier - low noise buffer - 40MHz sinusoidal clock output",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "PLL - CP, PFD, Loop Filter, divider, logic & calibration - 44MHz/160MHz Integer N",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "PLL - 44MHz integer N with ring osc for micro clocking",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Digital calibration circuits for analog PLL",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "PLL - PFD, charge pump, loop filter, divider, calibration <1MHz",
+    "subcategory": "PLL"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Video oscillator",
+    "subcategory": "Oscillator"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Ring oscillator, 3-stage",
+    "subcategory": "Oscillator"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "VCO - current steering, 1MHz",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "VCO - 200MHz",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "VCO - ring oscillator 300MHz",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "RC relaxation oscillator",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Digital clock generation",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "LC and ring oscillators",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Delay Locked Loop (DLL) for GDDR3, GDDR4",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Delay Locked Loop (DLL), digital control, 30pS resolution",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "Non-overlapping clock generators",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "2-phase non-overlapping clock generators",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "4-phase non-overlapping clock generators, 100's kHz to MHz's range",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "4-phase with delayed clocks for N-path switched capacitor filters",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "TDC - Time to Digital Converter, 8-bit, 130MHz",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Timing Circuits",
+    "description": "VCO LC tank oscillator, up to 6GHz",
+    "subcategory": "VCO"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Temperature sensor network, 16-channel",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Analog front end (AFE) - low noise interface for high-impedance MEMs sensor",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Hard disk drive pre-amplifier",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Automotive 60V gate driver",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "ADSL and VDSL analog front ends",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "GDDR3 and GDDR4 Graphics DRAM",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Capacitive touch sensor interface",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Digital audio (HD Audio) - 70MSPS ADC, mixer, down-converter IF freq, CORDIC processor, MATLAB simulation & design",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Headphone driver",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "5th order sigma delta DAC for audio",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Telephony CODEC",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "High-voltage telephony applications",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Ringing voltage generator",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "ADPCM transcoder chip set",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "AGC amplifiers for data application in spread spectrum radio (HF radio)",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "MSK modems for 2.4kbaud data rates",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "GMSK modulator, 1MBPS",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Cordless telephone transceiver 900MHz",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Bluetooth transceiver",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Wireless LAN transceiver 802.11B/G",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "GSM Edge Cellular transceiver",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Noxious gas sensor interface with precision analog and micro control",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Colorimetry sensor interface with microprocessor control",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Projective capacitive touchscreen controllers",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Lighting control, TRIAC based dimmers",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Power management IC (PMIC)",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Automotive pressure sensor",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "SENT communication interface",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Mixed Signal Applications",
+    "description": "Handset transceivers with significant mix-sig calibration requirements",
+    "subcategory": "Mixed Signal Applications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Decimation Filters",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Sigma delta decimation filters",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SAR ADC controller",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "DAC thermometer decoding",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "3rd order decimation filter",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Signal processing for analog calibration",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Averaging IIR filters",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SAR controller",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Capacitive sensor controller",
+    "subcategory": "DSP"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SDRAM",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Bipolar PROM (64KB)",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "EEPROM",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "EEPROM controller",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SD Card Controller",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "NAND Flash Controller with Error Detection and Correction",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SDRAM and LPSRAM Interface - 66 to 133MHz operation",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "DDR Interface - 200MHz operation",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Memory Management Unit (MMU) & Caches - 75MHz operation",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "DRAM data receiver interface 1GSPS",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "CPU RAM memory controller",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "CPU External FLASH memory controller",
+    "subcategory": "Memory Interface"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Custom digital state machines",
+    "subcategory": "Miscellaneous"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Digital sigma delta modulator",
+    "subcategory": "Miscellaneous"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "State machine for custom protocol two wire communication link",
+    "subcategory": "Miscellaneous"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "8051",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM Cortex-M0",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM7TDMI/ARM720 - 100Mhz",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM926 - 200MHz",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM946 - 200MHz",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM Cortex A8 - 1GHz",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM Cortex A9 - 1GHz",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "AVR Micro - 20MHz",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "Oak/Teak DSP",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM AHB Controller",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "ARM AHB Peripherals",
+    "subcategory": "Processors"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SPI - 70MHz operation",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SPI - 4MHz operation",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "SPI - Slave controller 30MHz",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "IIC - Slave",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "IIC - Master",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "UART",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "USART with FIFO, 115kBaud operation",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "USB 1.1 Controller",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "USB 2.0 Controller",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "USB 2.0 Multi-port Hub",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "USB 3.0 Multi-port Hub",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "MIPI Interface - 1GBPS operation",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "LVDS Interface - 1GBPS operation",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "RS485 class A/B differential driver with slew rate limiting and long-haul capability",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Digital Circuits",
+    "description": "JTAG Controller",
+    "subcategory": "Wireline Communications"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Bandgap 8-bit and 10-bit precision over (-40C to +85C)",
+    "subcategory": "Bandgap"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Bandgap for GPS receiver, SOI switch and 10-bit ADC",
+    "subcategory": "Bandgap"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Bandgap in LDOs and power converters with 60V input operation, 2% regulation with trim",
+    "subcategory": "Bandgap"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Li-Ion batt charger, 4.2V out, 4.5 to 9.5V in, 3A, 92% eff., on-die FETs, OV / OC protection",
+    "subcategory": "Battery Charger"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Boost converter - 6W, >90% efficiency, 5.5V output",
+    "subcategory": "Boost Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Boost converter - 5V out, 3V in, 1.2MHz switching, 95% eff., 1.2A, on-die FETs",
+    "subcategory": "Boost Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Buck converter - 4A, 95% efficiency, 5V output, 1.2V input",
+    "subcategory": "Buck Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Buck converter - 3A, 90% efficiency, 3.3V output, 12V input",
+    "subcategory": "Buck Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Buck controller, external FETs - 6A (typical), 85% efficiency, 1.6V to 45V output, 60V input max",
+    "subcategory": "Buck Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Buck converter, 0.75V to 3.25V out, up to 5.5V in, up to 3.2MHz switching, 95% eff., up to 2A, on-die FETs, PWM / PFM architectures",
+    "subcategory": "Buck Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Buck-Boost, Li-Ion batt charger, 4.2V out, 4.5 to 9.5V in, 3A, 92% eff., on-die FETs, OV / OC protection",
+    "subcategory": "Buck/Boost Converter"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Charge pump - high-voltage, 15-35V output, fully integrated, operation to 200C+, BCD-SOI process",
+    "subcategory": "Charge Pump"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Regulated charge pump for audio application, inverting (positive input, negative output)",
+    "subcategory": "Charge Pump"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 50mW, 1.8-3.0V output, 2-5V input",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 3.3V, 80dB PSRR 20kHz audio application",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 0.5W, 8V output, 20V input",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 0.25W, 3.3V output, 5V input",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 0.5W, 5V output, 16V input",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 0.5W, 5V output, 30V input",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 80dB PSRR over 10kHz, 60V input, 8V output",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - 2.5V to 3.0V programmable output, 3.3V input, 150mA load",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "LDO - LV input / output, up to 600mA (PMOS), up to 1.2A (NMOS)",
+    "subcategory": "LDO"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Linear Regulator - 50mW, 1.8-3.0V output, 2-5V input",
+    "subcategory": "Linear Regulator"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Linear Regulator - 500mW, 5V output, 7-15V input",
+    "subcategory": "Linear Regulator"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Linear Regulator - 5V output, 20V input",
+    "subcategory": "Linear Regulator"
+  },
+  {
+    "category": "Power Management Circuits",
+    "description": "Constant inversion coefficient current reference",
+    "subcategory": "Reference"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "IBM 4S, bipolar",
+    "subcategory": "BiCMOS, BiPolar"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "IBM 5S, 6HP, BiCMOS",
+    "subcategory": "BiCMOS, BiPolar"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "AMS 0.35µ",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "AMS 0.35µ, 50V high voltage",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "AMS 0.18µ, 1.8V digital, 120V analog high voltage",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "Global Foundries 0.18µ",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "IBM 7RF, 0.18µ mixed-signal process",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "IBM 65nm",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "IBM 40nm",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "MagnaChip - 0.35µ Low Voltage, 65V high voltage",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "MagnaChip - 0.18µ 3.3V",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "ON Semi 0.35µ Low Voltage, 80V high voltage",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "TowerJazz - 0.18-digital/0.35-analog mixed process",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "TSMC 90nm",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "TSMC 0.25µ",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "SMIC 0.18µ",
+    "subcategory": "CMOS"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "GaAs, 3.3V for digital and analog circuits heterojunction MESFETs",
+    "subcategory": "GaAs"
+  },
+  {
+    "category": "Semiconductor Process Expertise",
+    "description": "GaAs, 5V for microwave comms",
+    "subcategory": "GaAs"
+  }
+]

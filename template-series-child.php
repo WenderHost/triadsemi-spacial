@@ -15,15 +15,15 @@ if( ! empty( $next_page_id ) || ! empty( $prev_page_id ) )
   $context['page_nav'] = [];
 
 if( ! empty( $next_page_id ) )
-  $context['page_nav'] = [
-    'next_page_link' => get_permalink( $next_page_id ),
-    'next_page_title' => get_the_title( $next_page_id ),
+  $context['page_nav']['next'] = [
+    'link' => get_permalink( $next_page_id ),
+    'title' => get_the_title( $next_page_id ),
   ];
 
 if( ! empty( $prev_page_id ) )
-  $context['page_nav'] = [
-    'prev_page_link' => get_permalink( $prev_page_id ),
-    'prev_page_title' => get_the_title( $prev_page_id ),
+  $context['page_nav']['prev'] = [
+    'link' => get_permalink( $prev_page_id ),
+    'title' => get_the_title( $prev_page_id ),
   ];
 
 Timber::render( ['page.twig'], $context );
