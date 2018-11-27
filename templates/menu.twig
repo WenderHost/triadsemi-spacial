@@ -15,5 +15,8 @@
       {% endif %}
 		</li>
 	{% endfor %}
+  {% if cart.count is defined %}
+    <li class="nav-item"><a class="nav-link" href="/cart"><i class="ion-ios-cart" style="font-size: 16px; float: left; margin: -2px 8px 0 0;"></i> Cart ({{ cart.count }})</a></li>
+  {% endif %}
 	</ul>
 {% endif %}
