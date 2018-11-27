@@ -1,3 +1,28 @@
+/* GravityForms
+ ----------------------------- */
+.gform_wrapper{
+  .gform_button{
+    background-color: $triadblue;
+    border: 2px solid $triadblue;
+    padding: .2rem 1rem;
+    color: #fff;
+    border-radius: 3px;
+
+    &:hover{
+      cursor: pointer;
+      color: $triadblue;
+      background-color: #fff;
+    }
+  }
+  .ginput_container_fileupload{
+    input.medium{
+      width: 100% !important;
+    }
+  }
+}
+
+/* WooCommerce
+ ----------------------------- */
 .woocommerce{
   .product{
     .price{

@@ -1,6 +1,16 @@
 .tab-pane{
-  padding: 1rem;
+  padding: 2rem 2rem 1rem 2rem;
+}
+.tab-content{
+  border: 1px solid #dee2e6;
+  border-width: 0 1px 1px 1px;
+
 }
 ul.nav-tabs{
   margin-left: 0;
+
+  .nav-link{
+    background-color: #eee;
+    margin-right: 2px;
+  }
 }

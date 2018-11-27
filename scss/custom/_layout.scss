@@ -1,6 +1,10 @@
 body {
   @include font-smoothing;
 }
+html,body{
+  width: 100%;
+  overflow-x: hidden;
+}
 
 /* navbar light */
 .navbar-light {
@@ -91,6 +95,15 @@ body {
 
 .admin-bar .navbar{
   margin-top: 32px;
+}
+
+body{
+  &.blog,
+  &.single-post{
+    &.admin-bar .navbar{
+      margin-top: 0;
+    }
+  }
 }
 
 /* navbar dark */

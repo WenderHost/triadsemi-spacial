@@ -1,16 +1,33 @@
-.aligncenter{
+.aligncenter,
+.align-center{
   text-align: center;
 }
-figure.aligncenter{
+figure{
+  max-width: 100%;
+}
+
+figure.aligncenter,
+figure.align-center{
   margin: 1rem auto;
 }
-img.aligncenter{
+
+img.aligncenter,
+img.align-center{
   display: block;
   margin: 10px auto;
+  clear: both;
 }
-img.align-right{
+
+img.align-right,
+figure.align-right{
   float: right;
   margin: 0 0 1rem 1rem;
+}
+
+img.align-left,
+figure.align-left{
+  float: left;
+  margin: 0 1rem 1rem 0;
 }
 .wp-caption-text{
   font-size: .9rem;
