@@ -8,9 +8,11 @@
       <div class="bottom">
         <ul>
           <li><a href="#">&copy; Copyright {{"now"|date('Y')}} {{ site.name }}</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Legal</a></li>
-          <li><a href="#">Language</a></li>
+          {% if links %}
+            {% for item in links %}
+              <li><a href="{{ item.link }}" target="{{ item.target }}">{{ item.title }}</a></li>
+            {% endfor %}
+          {% endif %}
         </ul>
       </div>
     </div>
