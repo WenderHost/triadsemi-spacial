@@ -1,0 +1,14 @@
+<p class="lead">Power consumption and performance are a delicate balance. For many applications, especially in the case of low power sensors, bandwidth requirements are typically well defined by the phenomena being measured.</p>
+
+<p>For example the <a href="https://circ.ahajournals.org/content/104/25/3087.full" target="_blank">American Heart Association’s recommendation for the minimum bandwidth of a pediatric ECG waveform</a> is 250Hz or 500 sps. A key requirement such as this one could help to derive sub-component requirements such as opamp bandwidth as well provide key information on how to configure a Sigma-Delta ADC modulator bandwidth, clock frequency and sample rate. See <a href="/2007/01/25/how-to-design-a-16-bit-sigma-delta-analog-to-digital-converter/" target="_blank">How to design a 16-bit Sigma Delta Analog to Digital Converter</a> for more information.</p>
+
+<h3>Bandwidth vs Power</h3>
+
+<p><img src="{themedir}/images/formula_unity-gain-bandwidth.png" alt="Unity Gain Bandwidth formula" class="align-right" style="width: 200px;" />Let’s take a closer look at Bandwidth and Power tradeoffs. Specifically we will continue to analyze operational amplifiers however rules for opamps also apply to other ASIC elements as well. An opamp’s unity gain bandwidth (UGBW) is dependent on many aspects of its design, however one high-level tradeoff is the relationship between bias current and UGBW. This relationship is derived from the the formula at right. In this formula Aol is the open loop gain and fc is the dominant pole frequency. Assuming the pole frequency, diff pair topology and transistor sizing remains constant, Aol may be adjusted by scaling the bias current. This relationship is apparent in the chart below that lists a subset of Triad’s opamp designs from our IP portfolio. We are continuously building this portfolio with IP targeted at different applications and customer requirements.</p>
+
+<figure class="figure" style="display: block; text-align: center">
+  <img src="{themedir}/images/unity-gain-bandwidth_plot.png" alt="Triad opamp designs" class="img-figure align-center" style="width: 700px" />
+  <figcaption class="figure-caption text-center">A chart showing a subset of Triad’s opamp designs from our IP portfolio.</figcaption>
+</figure>
+
+<p>Going back to the Low Power ECG example, perhaps a gain of 200 V/V (~46dB) is needed for the second stage of the ECG front end measuring the 250 Hz signal. The theoretical minimum unity gain bandwidth would be 250Hz * 200 = 50 kHz. In reality some margin may be desirable but if we continue with this low bandwidth assumption, the opamp bias current requirements could be in the range of 1-2 uA.</p>

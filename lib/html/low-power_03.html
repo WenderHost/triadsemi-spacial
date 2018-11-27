@@ -1,0 +1,45 @@
+<p class="lead">While the foundation of low power design begins with selection of low power components, power performance can be significantly enhanced by dynamically controlling system resources such that they only consume appropriate power at the right time.</p>
+
+<p>Dynamic power control is something that almost all low power systems do to conserve energy, however they are often limited to the power modes available from a microcontroller device. These constraints on power modes, wake up times and interrupt triggering could lead to sacrificing precious power in your system and make microcontroller selection an incredibly tedious process.</p>
+
+<p>Using the Triad rASIC approach, a no compromises specification of a dynamic power control is part of the design process and will enable further reductions in power compared to solutions derived from off the shelf components.</p>
+
+<h3>Power Control State Machine</h3>
+
+<figure class="figure align-right" style="display: block; width: 500px;">
+  <img src="{themedir}/images/ecg-state-machine1.png" alt="Low Power ECG Sensor" class="img-figure img-fluid" />
+  <figcaption class="figure-caption text-center">Figure 1 – Low Power ECG Sensor – State diagram for power control state machine</figcaption>
+</figure>
+
+<p>Use of a power control state machine is the foundation for dynamic power control. This state machine will define what different states that the system will be in and what stimulus will cause the system to transition states. This transition could occur after a prescribed amount of time or upon some external stimulus such as a button press or change in sensor measurement.</p>
+
+<p>The state diagram shown in figure 1 provides an example of a power control state machine for a low power ECG sensor. This diagram is mostly for demonstration purposes but it highlights the use case for such a power control scheme.</p>
+
+<p>The primary state of the system is the “low power pulse counting” state. In this state, only the front end ECG amplifier, reference system, a low power comparator and some digital gates for pulse counting are enabled and consuming power. This provides a low power method for measuring an individual’s heart rate at all times.</p>
+
+<p>On regular intervals the system then enables a higher sample rate ADC to perform high resolution sampling of the ECG QRS complex. This High Resolution mode may also be enabled if an abrupt change in heart rate is detected.</p>
+
+<p>In either case, after the ADC is complete filling a SRAM buffer with data, a CPU could be enabled to process this data at a high clock rate and do the necessary analysis to quantify the v!arious segment and interval times shown in the diagram.</p>
+
+<p>After the analysis is complete, the system may need to enable an RF communication link, transmit the data to another device and then return to the Low Power Pulse Counting mode. Additional in order to keep the remote device up to date with the current heart rate, an RF Timer may also trigger RF transmissions independent of the High Res Timer or heart rate change detection.</p>
+
+<h3>Variable Clocking & Clock Gating</h3>
+
+<p>Variable clocking and clock gating are power control techniques that leverage the fact that a digital circuit’s power consumption is dependent upon the number of gates at the rate at which they are toggled. This is attributed to the power dissipated when charging and discharging the gate capacitance of the CMOS that the gates are built with.</p>
+
+<p>Assuming the previously shared state diagram, we perceive the difference in the amount of logic gates required in the low power pulse counting state vs the heartbeat analysis state. Additionally we can infer that the toggle rate of gates in the heart beat analysis should be substantially higher than pulse counting. This ASIC design can leverage this to only enable the analysis logic while only in the analysis state and also adjust the clock frequency accordingly. These adjustments can be made on a state by state basis yielding high performance whiten the s!tate while not affecting the power consumption in other states.</p>
+
+<h3>Power Domains and Variable Voltage Regulation</h3>
+
+<p>The last technique for low power design that will be discussed is use of power domains and variable voltage regulation. To this point, power and current have been used interchangeably, however this is only an approximation since P=I*V. Until a constant voltage has been assumed. When using multiple power domains and variable voltage regulation, we can further reduce p!ower by selecting a regulation technique and voltage that best suites the system state.</p>
+
+<p>Since ASICs have the ultimate flexibility to integrate many components into a single monolithic die, it should come as no surprise that this integration may include high efficiency switching regulators and Low Dropout Linear Voltage regulators. These power converters can improve or in some instances degrade power dissipation. In this section we will look at both examples.</p>
+
+<p>First lets consider our ECG example with the device operating in low power pulse counting mode. The current in this mode is very low, possibly around 10-20uA. If a switch mode power converter was used, its controller quiescent current and switching losses could easily be larger than the power dissipated by the pulse counting circuit itself. Instead to prevent losses from power conversion, it is most efficient to operate these circuits directly from the 3.7V Lithium Polymer Battery. This is an example where voltage regulation would be a detriment to power consumption.</p>
+
+<p>In other modes such as the heartbeat analysis mode, power savings due to a lower CPU core voltage are be greater than the switching power supply quiescent therefore this is an example !where voltage regulation will yield a lower power design.</p>
+
+<p>Between the two extremes is the example RF communication mode. For this mode, a RF transmitter may require a stage regulated voltage with 4-5mA of current for proper operation. In this state it would be possible for the ASIC to trim up the switch power supply to facilitate RF communication and then scale back down to the lower core voltage when the RF transmission is complete.</p>
+
+<p>In summary, power optimization can be very complex, even for simple systems with few components. Triads Low Power rASIC technology enables the ultimate control over implementation of a system power state machine for your system without compromises.</p>
+

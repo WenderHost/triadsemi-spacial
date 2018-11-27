@@ -1,0 +1,60 @@
+<p class="lead">Power reduction pays dividends across your entire product. Low Power ASICs provide design flexibility and improvements in your product’s 1) battery life, 2) size and weight, and 3) cost:</p>
+
+<h3>1) Extended Battery Life</h3>
+<div class="row">
+  <div class="col-md-8">
+    <p>One of the most prominent virtues of a Low Power ASIC is the battery life extensions that can be observed when the system power is reduced. It is well known that consumers value long battery life greatly due to the inconvenience of charging or changing batteries. In mission critical applications like the Seismic monitoring space, longer battery life provides a substantial differentiator against competitors by dramatically reducing costs associated with servicing devices that are deployed deep in the field.</p>
+
+    <p>Figure 1 demonstrates a first order projection of battery life in hours for a circuit consuming power from 200uA to 1mA in 200uA steps. This approximation is simply calculated as the typical battery capacity in mAh divided by the device current. There are many other factors that need to be considered to calculate actual battery life; however, this is beyond the scope of this analysis.</p>
+
+    <p>From the chart in Figure 1, we can begin to observe the 1/x relationship between Battery Life and device current therefore proving a large incentive for reducing power consumption. This trend is again highlighted in the chart in Figure 2 which takes a fixed battery capacity of 250mAh, sweeps device current across the x axis and shows first order battery life in days across the y axis.</p>
+  </div>
+  <div class="col-md-4">
+    <figure class="figure">
+      <img src="{themedir}/images/BatteryLifevCapacity.png" alt="Figure 1 – Battery Life vs Capacity" class="img-figure img-fluid" />
+      <figcaption class="figure-caption text-center">Figure 1 – Battery Life vs Capacity</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="{themedir}/images/BatteryLifevSupplyCurrent1.png" alt="Figure 2 – Battery Life vs Current" class="img-figure img-fluid" />
+      <figcaption class="figure-caption text-center">Figure 2 – Battery Life vs Current</figcaption>
+    </figure>
+  </div>
+</div>
+
+<h3>2) Reduced Size and Weight</h3>
+<div class="row">
+  <div class="col-md-8">
+    <p>While Battery Life is one important factor for consideration, it is certainly not the only. In some product spaces, there may be other criteria important to the product. When considering wearable devices, there is certainly an appeal to have thin, compact, light weight designs that fit comfortably on the wrist, the collar of a pet or in the sole of your shoe. In these applications, a balance between size, weight and battery life will need to be found.Naturally by using a Low Power ASIC, this often difficult balance can be greatly simplified.</p>
+
+    <p>The charts shown at left use a data set pulled from a battery distributor to represent real world examples of3.7V Lithium Polymer batteries available for purchase.</p>
+
+    <p>Specifically the charts demonstrate how Volume and Mass scale with battery capacity. As one may expect, both are linear relationships with some positive offset for non-energy storage aspects of the battery composition.</p>
+
+    <p>Knowing these trends, a designer can set requirements for mass, volume and battery life and select a battery that best fits this criteria. Again through use of a Low Power ASIC, this selection becomes easier because the life criteria becomes much less of a dominate factor in the selection process.</p>
+  </div>
+  <div class="col-md-4">
+    <figure class="figure">
+      <img src="{themedir}/images/BatteryVolumevCapacity.png" alt="Figure 3 – Lithium Polymer Battery Volume vs Capacity" class="img-figure img-fluid" />
+      <figcaption class="figure-caption text-center">Figure 3 – Lithium Polymer Battery Volume vs Capacity</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="{themedir}/images/BatteryMassvCapacity.png" alt="Figure 4 – Lithium Polymer Battery Mass vs Capacity" class="img-figure img-fluid" />
+      <figcaption class="figure-caption text-center">Figure 4 – Lithium Polymer Battery Mass vs Capacity</figcaption>
+    </figure>
+  </div>
+</div>
+
+<h3>3) Lower Cost</h3>
+<div class="row">
+  <div class="col-md-8">
+    <p>The final virtue of a low power ASIC that will be discussed is the relationship to price. The cost model of batteries is very complex with many variables involved but one trend is that lower capacity batteries require less raw materials therefore they may exhibit lower cost. This trend is visible in the chart below however unlike the charts before, we see much more variability in the data. None the less, a trend does exist demonstrating that lower capacity batteries are in general,less costly.</p>
+
+    <p>It is important to note that other elements of the system such as power management and charging circuits are also less expensive due to lower power.</p>
+  </div>
+  <div class="col-md-4">
+    <figure class="figure">
+      <img src="{themedir}/images/BatteryPricevCapacity.png" alt="Figure 5 – Battery Distribution Price vs Capacity" class="img-figure img-fluid" />
+      <figcaption class="figure-caption text-center">Figure 5 – Battery Distribution Price vs Capacity</figcaption>
+    </figure>
+  </div>
+</div>

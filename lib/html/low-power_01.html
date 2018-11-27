@@ -1,0 +1,23 @@
+<p class="lead">Simply making the transition to an integrated mixed signal ASIC comes with some built-in power savings. These inherent power savings come from the ability to share reference resources among multiple elements and reductions in circuit parasitics that relax the requirements on output stages.</p>
+
+<h3>Shared Reference Systems</h3>
+
+<p>For the vast majority of analog circuits, a current source is required to provide bias to internal transistors. Take for example the schematic of the venerable and well beloved LM741 shown below. While admissibly this design has never been considered to be low power and is based on bi-polar technology, its circuit topology is telling of the sub components of any OpAmp and demonstrates where current is being spent in the circuit.</p>
+
+<img src="{themedir}/images/LM741_schematic_reduced.png" alt="LM741 Schematic" class="align-center img-fluid" style="width: 650px;" />
+
+<p>Starting from the center, we see a 39 kOhm resistor in series with diode connected PNP and NPN transistors. For a +/-20V supply, this 39 kOhm resistor along with the voltage drop of Q11and Q12 determine a reference current of about 1mA.</p>
+
+<p>Though use of current mirrors, this reference is scaled to the left by Q9, Q10 and a 5 kOhm resistor to provide 20uA of bias to the input differential pair (Q8). To the right of the bias circuit,the gain stage and level shift circuits are biased via Q13. The Gain Stage then in turn drives an output stage which we will discuss next.</p>
+
+<p>Taking a step back and thinking about the brief analysis from the LM741 topology, we can see that 40uA of current is used for the input stage of the Amplifier and another 1 mA is used for the Gain stage. An additional 1mA is overhead associated with generating bias. Overall 49% of the total LM741 quiescent current is used to generate a bias reference.</p>
+
+<p>Now imagine a system with 8 LM741s, each with a dedicated bias circuit. This remains the case even if a quad packaged . 8mA of current is dissipated for bias references generation and another 8.32mA for the respective amplifier stages for a total of 16.32mA quiescent current. If we were able to utilize a shared reference system like what is done in a Triad rASIC, the the bias reference would be reduced to 1mA in total and 8.32mA for a total of 9.32mA quiescent current, a 7mA savings.</p>
+
+<p>Of course modern opamp design techniques and processes have evolved greatly since the inception of LM741 but the general rule remains true that redundant reference circuits will always be less power efficient than those that share the same reference system and it scales appropriately as more circuits are integrated.</p>
+
+<h3>Reductions in circuit parasitics</h3>
+
+<p>In addition to integration savings related to bias references, circuit parasitics play a role in the total power dissipation of a circuit. Going back to the LM741 example, we have not yet analyzed the output stage of the amplifier. Since the LM741 is a discrete opamp device and is intended to drive external loads, it has a considerably high current output stage that enables it to easily maintain a specified slew rate while driving a capacitance of 100pF. This level of capacitance is at least 1-2 orders of magnitude higher than those observed in silicon. If fact more often, capacitance at the ASIC level is quantified in femto farads.</p>
+
+<p>With this scaling of capacitance, we can greatly reduce the requirements of the output stage and consequently power. This relationship is more dif¥cult to quantify with an absolute number however I=C*dv/dt so if dv/dt remains constant and the ASIC level C is 1% of PCB level then there could be up to 99% power savings in the output stage. In some occasions, the output stage can be eliminated completely. Again there are many factors that change this relationship,this example describes a generic virtue of Triads Low Power ASIC integration capabilities.</p>

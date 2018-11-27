@@ -1,0 +1,48 @@
+<h3 class="text-center">Case Study: A 6-channel EEG plus pulse oximetry ASIC</h3>
+
+<p>What if your next project needed to combine pulse oximetry and EEG brainwave capture in a small power efficient design. Your circuit requirements might look like the following:</p>
+
+<div class="row">
+  <div class="col-md-4">
+    <h4 class="text-center">Per EEG Channel (x6)</h4>
+    <ul><li>Differential Amplifier with Programmable Gain</li>
+        <li>Programmable Switched capacitor low pass filter</li>
+        <li>Analog multiplexer</li>
+        <li>16-bit sigma delta ADC with 4kSPS sample rate</li>
+        <li>Combined digital decimation filter</li>
+        <li>Digital controller</li>
+        <li>SPI Master serial interface</li>
+        <li>General purpose IO (GPIO)</li></ul>
+  </div>
+  <div class="col-md-4">
+    <h4 class="text-center">Pulse Oximetry Circuit</h4>
+    <ul><li>Digital to analog (DAC) for current control of pulse ox LED pulser</li>
+        <li>Voltage boost converter for LED drive</li>
+        <li>Pulse oximetry high-voltage output stage</li>
+        <li>Transimpedance amplifier with programmable gain to measure return optical pulses</li>
+        <li>Programmable switched capacitor filter</li>
+        <li>Sigma delta ADC with correlated double sampling for noise reduction (16bits @ 500SPS)</li></ul>
+  </div>
+  <div class="col-md-4">
+    <h4 class="text-center">Power management</h4>
+      <ul><li>Linear regulator to normalize a 1-volt battery input voltage</li>
+            <li>Battery fuel gauge to measure battery life</li>
+            <li>Voltage supervisor to detect under voltage conditions</li>
+            <li>Switching boost regulator to high operating voltages for the analog and digital portions of the ASIC</li>
+            <li>Bandgap reference for stable voltage reference generation</li>
+            <li>Watch crystal (32kHz) driver for use of inexpensive yet precise timing reference</li>
+            <li>On-board PLL to boost 32kHz to frequencies up to 5-10MHz for higher speed operation. Lower speeds supported for significant power savings in idle and sleep modes.</li></ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
