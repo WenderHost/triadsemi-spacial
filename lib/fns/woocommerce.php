@@ -16,6 +16,14 @@ function account_dashboard(){
 }
 //add_action( 'woocommerce_account_dashboard', __NAMESPACE__ . '\\account_dashboard' );
 
+function bootstrap_form_field_args ($args, $key, $value) {
+
+  $args['class'][] = 'form-group';
+  $args['input_class'][] = 'form-control';
+  return $args;
+}
+add_filter( 'woocommerce_form_field_args', __NAMESPACE__ . '\\bootstrap_form_field_args', 10, 3);
+
 /**
  * Configures WooCommerce product display setup.
  */
@@ -30,9 +38,6 @@ function product_display() {
 
   remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-  //remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-  //remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
-  //add_action('woocommerce_after_single_product_summary', __NAMESPACE__ . '\\product_content', 10);
 }
 add_action('wp_head', __NAMESPACE__ . '\\product_display');
 
