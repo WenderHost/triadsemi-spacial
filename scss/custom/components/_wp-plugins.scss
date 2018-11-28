@@ -24,6 +24,47 @@
 /* WooCommerce
  ----------------------------- */
 .woocommerce{
+  .coupon input.input-text{
+    width: 200px !important;
+  }
+  p.woocommerce-SavedPaymentMethods-saveNew{
+    input{
+      margin-top: 9px;
+      margin-right: 8px;
+    }
+  }
+
+  button.wc-stripe-checkout-button{
+    //@include bootstrap-button($triadblue);
+    @include button-variant(#fff, $triadblue, $triadblue);
+    border-radius: 3px;
+    padding: 6px 16px;
+    border: none;
+  }
+
+  #customer_details{
+    margin-bottom: 2rem;
+
+    label{
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .input-text,
+    .woocommerce-input-wrapper{
+      width: 100%;
+    }
+    .form-row{
+      .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: 2.3;
+      }
+      .select2-container .select2-selection--single,
+      .select2-container--default .select2-selection--single .select2-selection__arrow{
+        height: 36px;
+      }
+    }
+
+  }
   .product{
     .price{
       font-weight: bold;
