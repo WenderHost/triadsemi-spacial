@@ -3,15 +3,16 @@
 	{% for item in menu %}
     {% set submenu = item.get_children %}
 		<li class="{{ item.classes | join(' ') }} nav-item active{% if submenu %} dropdown{% endif %}">
-      {% set classes = ( submenu )? 'nav-link dropdown dropdown-toggle' : 'nav-link' %}
-			<a class="{{ classes }}" target="{{ item.target }}" href="{{ item.link }}">
+      {% set classes = ( submenu )? 'nav-link dropdown-toggle' : 'nav-link' %}
+			<a class="{{ classes }}" target="{{ item.target }}" href="{{ item.link }}"{% if submenu %} data-toggle="dropdown"{% endif %}>
         {{ item.title }}
         {% if submenu %}
           <i class="ion-chevron-down"></i>
         {% endif %}
       </a>
       {% if submenu %}
-        {% include "partial/dropdown.twig" with {'menu': item.get_children} %}
+        {% set args = ( item.link != '#' )? { 'menu': item.get_children, 'parentlink': item.link, 'parenttitle': item.title ~ ' Overview' } : { 'menu': item.get_children } %}
+        {% include "partial/dropdown.twig" with args %}
       {% endif %}
 		</li>
 	{% endfor %}
