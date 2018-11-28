@@ -95,6 +95,10 @@ html,body{
 
 .admin-bar .navbar{
   margin-top: 32px;
+
+  @media (max-width: 992px) {
+    margin-top: 0;
+  }
 }
 
 body{
@@ -108,7 +112,7 @@ body{
 
 /* navbar dark */
 .navbar-dark {
-  background-color: #282F37 !important;
+  background-color: #23282D !important;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 
   @include transition(all .4s);
@@ -121,6 +125,14 @@ body{
     font-size: 21px;
     letter-spacing: .5px;
     color: #fff;
+
+    img{
+      height: 51px;
+
+      @media (max-width: 992px) {
+        height: 36px;
+      }
+    }
 
     @include transition(color .2s linear);
   }
