@@ -17,6 +17,9 @@ function is_blog_page(){
     if( is_product() )
       return false;
 
+    if( is_post_type_archive( 'userproject' ) )
+      return true;
+
     //everything else
     if( is_single() )
       return true;

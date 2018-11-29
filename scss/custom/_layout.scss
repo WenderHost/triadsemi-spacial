@@ -111,7 +111,8 @@ html,body{
 
 body{
   &.blog,
-  &.single-post{
+  &.single-post,
+  &.post-type-archive-userproject{
     &.admin-bar .navbar{
       margin-top: 0;
     }
