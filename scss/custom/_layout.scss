@@ -21,6 +21,14 @@ html,body{
     font-size: 21px;
     letter-spacing: .5px;
 
+    img{
+      height: 51px;
+
+      @media (max-width: 992px) {
+        height: 36px;
+      }
+    }
+
     @include transition(color .2s linear);
   }
 

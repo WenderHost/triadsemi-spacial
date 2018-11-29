@@ -30,10 +30,10 @@
 
     a:not(a.btn){
       color: #fff;
-      text-decoration: underline;
 
       &:hover{
         color: $triadyellow;
+        text-decoration: underline;
       }
     }
 

@@ -46,16 +46,16 @@
 		{% if title %}<h1>{{title}}</h1>{% endif %}
     {% if page_nav %}
     <div class="row page-nav top">
-      <div class="col">{% if page_nav.prev.link is not empty %}<a href="{{ page_nav.prev.link }}">&larr; Previous: {{ page_nav.prev.title }}</a>{% endif %}</div>
-      <div class="col" style="text-align: right;">{% if page_nav.next.link is not empty %}<a href="{{ page_nav.next.link }}">Next: {{ page_nav.next.title }} &rarr;</a>{% endif %}</div>
+      <div class="col-md-6">{% if page_nav.prev.link is not empty %}<a href="{{ page_nav.prev.link }}">&larr; Previous: {{ page_nav.prev.title }}</a>{% endif %}</div>
+      <div class="col-md-6" style="text-align: right;">{% if page_nav.next.link is not empty %}<a href="{{ page_nav.next.link }}">Next: {{ page_nav.next.title }} &rarr;</a>{% endif %}</div>
     </div>
     {% endif %}
     {% if sidebar %}
     <div class="row">
-      <div class="col-8">
+      <div class="col-md-8">
         {{ post.content }}
       </div>
-      <div class="col-4">
+      <div class="col-md-4">
         {{ sidebar }}
       </div>
     </div>
@@ -64,8 +64,8 @@
     {% endif %}
     {% if page_nav %}
     <div class="row page-nav bottom">
-      <div class="col">{% if page_nav.prev.link is not empty %}<a href="{{ page_nav.prev.link }}">&larr; Previous: {{ page_nav.prev.title }}</a>{% endif %}</div>
-      <div class="col" style="text-align: right;">{% if page_nav.next.link is not empty %}<a href="{{ page_nav.next.link }}">Next: {{ page_nav.next.title }} &rarr;</a>{% endif %}</div>
+      <div class="col-md-6">{% if page_nav.prev.link is not empty %}<a href="{{ page_nav.prev.link }}">&larr; Previous: {{ page_nav.prev.title }}</a>{% endif %}</div>
+      <div class="col-md-6" style="text-align: right;">{% if page_nav.next.link is not empty %}<a href="{{ page_nav.next.link }}">Next: {{ page_nav.next.title }} &rarr;</a>{% endif %}</div>
     </div>
     {% endif %}
 	</section>
