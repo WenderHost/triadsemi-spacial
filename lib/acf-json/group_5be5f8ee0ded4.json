@@ -1,0 +1,90 @@
+{
+    "key": "group_5be5f8ee0ded4",
+    "title": "Page Options",
+    "fields": [
+        {
+            "key": "field_5be5f94951d68",
+            "label": "Hero Image",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "herounit",
+            "library": "all",
+            "min_width": 1920,
+            "min_height": 375,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, jpg,gif"
+        },
+        {
+            "key": "field_5be9fa49d39ad",
+            "label": "Tagline",
+            "name": "tagline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5be9fb69efdf7",
+            "label": "Link to Parent",
+            "name": "link_to_parent",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Link to parent page?": "Link to parent page?"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543506842
+}
