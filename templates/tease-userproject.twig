@@ -2,15 +2,15 @@
   {% set thumbnail = ( post.thumbnail )? 'background-image: url(' ~ post.thumbnail.src('blogthumbnail') ~ '); background-size: 100% auto; background-position: center; background-repeat: no-repeat;' : '' %}
     <div class="post-wrapper col-md-4">
       <div class="post-bg" style="{{ thumbnail }}">
-        <a href="{{ link }}" target="_blank" title="{{ post.title }}">{{ post.title }}</a>
+        <a href="{{ link }}" target="_blank" title="{{ post.title }}"><i class="ion-android-open"></i></a>
       </div>
       <div class="post-intro">
         <div class="post-title">
-          <a href="{{ link }}">{{ post.title }}</a>
+          <a href="{{ link }}" target="_blank">{{ post.title }} <i class="ion-android-open"></i></a>
         </div>
         <div class="post-description">
           {{ post.content }}
         </div>
-        <p><a href="{{ link }}" class="post" target="_blank">Read more &rarr;</a></p>
+        <p><a href="{{ link }}" class="post" target="_blank">Read more <i class="ion-android-open"></i></a></p>
       </div>
     </div>
