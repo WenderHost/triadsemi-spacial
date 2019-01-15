@@ -1,3 +1,13 @@
+/* Bulk Discounts
+ ----------------------------- */
+.table-discounts{
+  tr:last-child{
+    td{
+      border-bottom: 2px solid #dee2e6;
+    }
+  }
+}
+
 /* GravityForms
  ----------------------------- */
 .gform_wrapper{

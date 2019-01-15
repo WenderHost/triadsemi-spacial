@@ -19,7 +19,7 @@
           {% else %}
             {% do action('woocommerce_single_product_summary') %}
             {% if bulk_discounts is not empty %}
-              <table class="table table-sm table-striped">
+              <table class="table table-sm table-striped table-discounts">
                 <thead>
                   <tr>
                     <th style="font-size: 14px;">Price Break</th>
@@ -40,10 +40,9 @@
               </table>
             {% endif %}
           {% endif %}
-          <hr style="clear: both;" />
           {% set documents = post.get_field('documents') %}
           {% if documents is not empty %}
-            <h4>Related Information</h4>
+            <h4 style="clear: both;">Related Information</h4>
             <ul>
             {% for file in documents %}
               {% set url = fn('wp_get_attachment_url',file.files) %}
