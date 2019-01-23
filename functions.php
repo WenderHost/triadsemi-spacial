@@ -2,7 +2,7 @@
 /**
  * Timber starter-theme
  * https://github.com/timber/starter-theme
- *
+ * @version 1.0.0
  * @package  WordPress
  * @subpackage  Timber
  * @since   Timber 0.1
