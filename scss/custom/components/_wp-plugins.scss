@@ -81,8 +81,23 @@
       font-size: 1.75rem;
       float: left;
     }
+
+    &.outofstock{
+      .price{
+        display: none;
+      }
+    }
     .stock{
       display: none;
+
+      &.out-of-stock{
+        display: block;
+        background: $triadblue;
+        color: $triadyellow;
+        font-weight: bold;
+        text-align: center;
+        padding: 4px 10px;
+      }
     }
 
     form.cart{
