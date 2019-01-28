@@ -133,6 +133,7 @@ function product_line( $atts ){
     'category'  => null,
     'tag'       => null,
     'title'     => null,
+    'include'   => null,
   ], $atts );
 
   if( stristr( $args['category'], ',' ) )
@@ -149,14 +150,27 @@ function product_line( $atts ){
 
   $title = ( is_null( $args['title'] ) )? implode( ', ', $args['category'] ) . ' Products' : $args['title'] ;
 
-  $product_ids = wc_get_products([
+  $get_products_args = [
     'limit'     => -1,
-    'orderby'   => 'title',
-    'order'     => 'ASC',
     'return'    => 'ids',
     'category'  => $args['category'],
     'tag'       => $args['tag'],
-  ]);
+    'orderby'   => 'title',
+    'order'     => 'ASC',
+  ];
+  if( ! is_null( $args['include'] ) ){
+    if( stristr($args['include'], ',' ) ){
+      $include = explode(',', $args['include'] );
+    } else if( ! is_array( $args['include'] ) && is_numeric( $args['include'] ) ){
+      $include = [ $args['include'] ];
+    }
+  }
+  if( is_array( $include ) && 0 < count( $include ) ){
+    $product_ids = $include;
+  } else {
+    $product_ids = wc_get_products( $get_products_args );
+  }
+
   if( $product_ids ){
     foreach ( $product_ids as $id ) {
       $products[] = [
