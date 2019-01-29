@@ -99,14 +99,21 @@ add_shortcode( 'include', __NAMESPACE__ . '\\include_file' );
 
 function list_children( $atts ){
   $args = shortcode_atts( [
-    'foo' => 'bar',
+    'orderby' => 'post_title',
   ], $atts );
+
+  if( 'title' == $args['orderby'] )
+    $args['orderby'] = 'post_title';
+
+  // Validate our `orderby` attribute
+  $allowed_sort_columns = ['post_title','menu_order','post_date','post_modified','ID','post_author','post_name'];
+  $sort_column = ( in_array( $args['orderby'], $allowed_sort_columns ) )? $args['orderby'] : 'post_title' ;
 
   global $post;
 
   $children = get_pages([
     'sort_order'    => 'ASC',
-    'sort_column'   => 'menu_order',
+    'sort_column'   => $sort_column,
     'parent'        => $post->ID,
     'hierarchical'  => false,
   ]);
