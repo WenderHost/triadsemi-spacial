@@ -136,7 +136,7 @@ body{
     color: #fff;
 
     img{
-      height: 51px;
+      height: 36px; /* 51px for full logo, 36px for wordmark */
 
       @media (max-width: 992px) {
         height: 36px;
