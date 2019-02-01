@@ -1,9 +1,11 @@
 {% set is_blog_page = is_blog_page() %}
 {% set nav_classes = ( is_blog_page )? 'navbar-light' : 'navbar-dark bg-transparent' %}
+{% set logo_dimensions = ( 'triad' == header.logo )? '800x301' : '800x411' %}
+{% set header_logo = ( header.logo is not empty )? header.logo : 'triad' %}
   <nav class="nav-main navbar navbar-expand-lg {{ nav_classes }}" id="nav-main"  role="navigation">
     <div class="container no-override">
       <a class="navbar-brand" href="{{ site.url }}">
-        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-triad_{% if is_blog_page %}dark{% else %}light{% endif %}.800x301.png" class="d-lg-inline mr-2" />
+        <img src="{{ fn('get_stylesheet_directory_uri') }}/images/logo-{{ header_logo }}_{% if is_blog_page %}dark{% else %}light{% endif %}.{{ logo_dimensions }}.png" class="d-lg-inline mr-2 {{ header_logo }}" />
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
         <span class="navbar-toggler-icon"></span>

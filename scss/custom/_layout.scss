@@ -101,7 +101,7 @@ html,body{
   }
 }
 
-.admin-bar .navbar{
+.admin-bar .bg-transparent.navbar{
   margin-top: 32px;
 
   @media (max-width: 992px) {
@@ -137,6 +137,10 @@ body{
 
     img{
       height: 36px; /* 51px for full logo, 36px for wordmark */
+
+      &.triadsemi{
+        height: 51px;
+      }
 
       @media (max-width: 992px) {
         height: 36px;

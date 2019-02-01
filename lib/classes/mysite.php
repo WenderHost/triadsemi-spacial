@@ -37,6 +37,10 @@ class StarterSite extends Timber\Site {
     $context['footer_3'] = Timber::get_widgets('footer_3');
     $context['footer_4'] = Timber::get_widgets('footer_4');
 
+    // ACF Options Page
+    $header_logo = get_field( 'header_logo', 'option' );
+    $context['header']['logo'] = ( empty( $header_logo ) )? 'triad' : $header_logo;
+
     // WooCommerce Cart Contents
     if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
       $count = WC()->cart->cart_contents_count;
