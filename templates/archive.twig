@@ -1,9 +1,20 @@
-{# This file demonstrates using most of the index.twig template and modifying 
+{# This file demonstrates using most of the index.twig template and modifying
    just a small part. See `search.twig` for an example of another approach #}
 
 {% extends "index.twig" %}
 
 {% block content %}
-  <h3>This is my archive</h3>
-  {{ parent() }}
+  <div class="blog-cols-header">
+    <div class="container">
+      <h2>{{ title }}</h2>
+    </div>
+  </div>
+  <div class="blog-cols-wrapper">
+    <div class="container">
+      {#{ parent() }#}
+      {% for post in posts %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}
