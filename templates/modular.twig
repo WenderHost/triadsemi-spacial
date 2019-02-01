@@ -1,13 +1,20 @@
 {% extends "base.twig" %}
 
 {% block header %}
-  {% if post.content is not empty %}
-    {% set featureimage = ( post.thumbnail.src('full') ) ? post.thumbnail.src('full') : fn('get_stylesheet_directory_uri') ~ '/images/unsplash/michael-benz-189971.jpg' %}
-    <div class="business-hero" style="background-image: url({{ featureimage }})">
-        <div class="container">
-          {{ post.content }}
-        </div>
-    </div>
+  {% if page_header %}
+    {% if 'background_image' == page_header.type %}
+      <div class="business-hero" style="background-image: url({{ page_header.background }})">
+          <div class="container">
+            {{ page_header.content }}
+          </div>
+      </div>
+    {% elseif 'background_gradient' == page_header.type %}
+      <div class="index-header">
+        <section class="container">
+          {{ page_header.content }}
+        </section>
+      </div>
+    {% endif %}
   {% else %}
     {{ parent() }}
   {% endif %}
@@ -18,7 +25,11 @@
     {% for module in modules %}
       <div class="modular{% if module.class %} {{ module.class }}{% endif %}"{% if module.style %} style="{{ module.style }}"{% endif %}>
         <section class="container">
-          {{ module.content }}
+          {% if module.content_block %}
+            {{ module.content_block }}
+          {% else %}
+            {{ module.content }}
+          {% endif %}
         </section>
       </div>
     {% endfor %}
