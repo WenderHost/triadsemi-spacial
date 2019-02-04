@@ -16,7 +16,7 @@
                 "id": ""
             },
             "choices": {
-                "triad": "TRIAD workmark",
+                "triad": "TRIAD wordmark",
                 "triadsemi": "TRIAD Logo"
             },
             "allow_null": 0,
@@ -44,5 +44,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1549054298
+    "modified": 1549057512
 }
