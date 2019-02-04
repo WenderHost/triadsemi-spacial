@@ -35,7 +35,7 @@
                         "id": ""
                     },
                     "return_format": "id",
-                    "library": "uploadedTo",
+                    "library": "all",
                     "min_size": "",
                     "max_size": "",
                     "mime_types": ""
@@ -79,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543506859
+    "modified": 1549294689
 }
