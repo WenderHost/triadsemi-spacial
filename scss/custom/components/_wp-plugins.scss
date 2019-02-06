@@ -30,6 +30,19 @@
     }
   }
 }
+.gform_confirmation_wrapper{
+  .gform_confirmation_message{
+    font-size: 15px;
+    font-weight: 400;
+    color: #155724;
+    background-color: #d4edda;
+
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #c3e6cb;
+    border-radius: .25rem;
+  }
+}
 
 /* WooCommerce
  ----------------------------- */
