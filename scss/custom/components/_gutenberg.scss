@@ -1,0 +1,11 @@
+/* Gutenberg Styles */
+@media(min-width: 600px){
+  .wp-block-column{
+    &.one-third{
+      flex-basis: 33%;
+    }
+    &.two-thirds{
+      flex-basis: 67%;
+    }
+  }
+}
