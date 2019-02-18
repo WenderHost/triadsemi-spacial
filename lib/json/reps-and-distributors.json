@@ -157,7 +157,7 @@
   {
     "region": "New York",
     "abbr": "NY",
-    "contacts": "[include file='reps/rep_triad']"
+    "contacts": "[include file=reps/rep_fjm-associates]Territory: Upstate New York<br /><br />[include file='reps/rep_triad']"
   },
   {
     "region": "North Carolina",
