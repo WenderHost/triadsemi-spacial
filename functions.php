@@ -63,3 +63,8 @@ include_once('lib/fns/sidebars.php');
 include_once('lib/fns/user-projects-cpt.php');
 include_once('lib/fns/utilities.php');
 include_once('lib/fns/woocommerce.php');
+include_once('lib/fns/wp-html-email.php');
+
+// Add MailTrap support
+if( file_exists( dirname( __FILE__ ) . '/mailtrap.php') )
+  include_once( dirname( __FILE__ ) . '/mailtrap.php');
