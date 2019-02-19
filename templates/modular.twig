@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block header %}
-  {% if page_header %}
+  {% if page_header and page_header.type is not empty %}
     {% if 'background_image' == page_header.type %}
       <div class="business-hero" style="background-image: url({{ page_header.background }})">
           <div class="container">
