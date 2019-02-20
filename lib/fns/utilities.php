@@ -17,6 +17,9 @@ function is_blog_page(){
     if( is_product() )
       return false;
 
+    if( is_post_type_archive( 'product' ) )
+      return false;
+
     if( is_archive() )
       return true;
 
