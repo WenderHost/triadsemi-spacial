@@ -11,6 +11,9 @@
 /* bootstrap */
 @import "bootstrap/bootstrap";
 
+/* Gravity Forms */
+@import "custom/gravityforms/gravityforms";
+
 /* components */
 @import "custom/components/alerts";
 @import "custom/components/animation";
@@ -32,7 +35,6 @@
 @import "custom/components/typography";
 @import "custom/components/wordpress";
 @import "custom/components/wp-plugins";
-@import "custom/components/wp-plugins_gravityforms-formsmain";
 
 /* vendor */
 // @import "vendor/animate";
