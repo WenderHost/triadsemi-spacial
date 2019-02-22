@@ -23,13 +23,9 @@
 {% block content %}
   {% if modules %}
     {% for module in modules %}
-      <div class="modular{% if module.class %} {{ module.class }}{% endif %}"{% if module.style %} style="{{ module.style }}"{% endif %}>
+      <div class="modular{% if module.attributes.classes %} {{ module.attributes.classes }}{% endif %}"{% if module.attributes.styles %} style="{{ module.attributes.style }}"{% endif %}>
         <section class="container">
-          {% if module.content_block %}
-            {{ module.content_block }}
-          {% else %}
-            {{ module.content }}
-          {% endif %}
+          {{ module.content }}
         </section>
       </div>
     {% endfor %}

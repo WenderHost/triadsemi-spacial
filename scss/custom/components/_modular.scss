@@ -59,6 +59,10 @@
     background-color: $triadblue;
     padding: 30px 0 34px;
 
+    & + .footer{
+      margin-top: 0;
+    }
+
     div[class^="col-"]:first-child{
       @media (max-width: 991px) {
           margin-bottom: 20px;

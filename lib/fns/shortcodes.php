@@ -146,13 +146,13 @@ function product_line( $atts ){
   if( stristr( $args['category'], ',' ) )
     $args['category'] = explode( ',', $args['category'] );
 
-  if( ! is_array( $args['category'] ) )
+  if( ! is_array( $args['category'] ) && ! is_null( $args['category'] ) )
     $args['category'] = [$args['category']];
 
   if( stristr( $args['tag'], ',' ) )
     $args['tag'] = explode( ',', $args['tag'] );
 
-  if( ! is_array( $args['tag'] ) )
+  if( ! is_array( $args['tag'] ) && ! is_null( $args['tag'] ) )
     $args['tag'] = [$args['tag']];
 
   $title = ( is_null( $args['title'] ) )? implode( ', ', $args['category'] ) . ' Products' : $args['title'] ;
@@ -160,11 +160,16 @@ function product_line( $atts ){
   $get_products_args = [
     'limit'     => -1,
     'return'    => 'ids',
-    'category'  => $args['category'],
-    'tag'       => $args['tag'],
     'orderby'   => 'title',
     'order'     => 'ASC',
   ];
+
+  if( 0 < count( $args['category'] ) )
+    $get_products_args['category'] = $args['category'];
+
+  if( 0 < count( $args['tag'] ) )
+    $get_products_args['tag'] = $args['tag'];
+
   if( ! is_null( $args['include'] ) ){
     if( stristr($args['include'], ',' ) ){
       $include = explode(',', $args['include'] );
@@ -172,7 +177,8 @@ function product_line( $atts ){
       $include = [ $args['include'] ];
     }
   }
-  if( is_array( $include ) && 0 < count( $include ) ){
+
+  if( isset( $include ) && is_array( $include ) && 0 < count( $include ) ){
     $product_ids = $include;
   } else {
     $product_ids = wc_get_products( $get_products_args );
