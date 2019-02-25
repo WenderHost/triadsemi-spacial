@@ -152,7 +152,7 @@
   {
     "region": "New Mexico",
     "abbr": "NM",
-    "contacts": "[include file='rep_techcoast']"
+    "contacts": "[include file='reps/rep_techcoast']"
   },
   {
     "region": "New York",
