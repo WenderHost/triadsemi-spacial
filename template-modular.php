@@ -45,7 +45,14 @@ if( have_rows('modules') ):
           $html = '<div class="alert alert-danger">One or more details for your CTA is empty.</div>';
           break;
         }
+
+        $event_tracking = get_sub_field('event_tracking');
+        $onclick = '';
+        if( $event_tracking )
+          $onclick = "__gaTracker('send','event','{$event_tracking['category']}','{$event_tracking['action']}','{$event_tracking['label']}')";
+
         $attributes['classes'] = 'modular-callout';
+        //' . $cta['link']['url'] . '
         $html =
         '<div class="row">
           <div class="col-lg-8">
@@ -53,7 +60,7 @@ if( have_rows('modules') ):
             <p>' . $cta['text'] . '</p>
           </div>
           <div class="col-lg-4 text-right">
-            <a href="' . $cta['link']['url'] . '" class="btn btn-triadyellow btn-lg btn-block" target="' . $cta['link']['target'] . '">' . $cta['link']['title'] . '</a>
+            <a href="#" class="btn btn-triadyellow btn-lg btn-block" target="' . $cta['link']['target'] . '" onclick="' . $onclick . '">' . $cta['link']['title'] . '</a>
           </div>
         </div>';
         break;
