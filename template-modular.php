@@ -52,7 +52,6 @@ if( have_rows('modules') ):
           $onclick = "__gaTracker('send','event','{$event_tracking['category']}','{$event_tracking['action']}','{$event_tracking['label']}')";
 
         $attributes['classes'] = 'modular-callout';
-        //' . $cta['link']['url'] . '
         $html =
         '<div class="row">
           <div class="col-lg-8">
@@ -60,7 +59,7 @@ if( have_rows('modules') ):
             <p>' . $cta['text'] . '</p>
           </div>
           <div class="col-lg-4 text-right">
-            <a href="#" class="btn btn-triadyellow btn-lg btn-block" target="' . $cta['link']['target'] . '" onclick="' . $onclick . '">' . $cta['link']['title'] . '</a>
+            <a href="' . $cta['link']['url'] . '" class="btn btn-triadyellow btn-lg btn-block" target="' . $cta['link']['target'] . '" onclick="' . $onclick . '">' . $cta['link']['title'] . '</a>
           </div>
         </div>';
         break;
