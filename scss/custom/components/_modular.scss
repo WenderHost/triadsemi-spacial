@@ -3,6 +3,22 @@
 .modular{
   padding-top: 60px;
 
+  &.nomargins,
+  &.nomargins.color{
+    margin: 0;
+  }
+
+  &.nomargins.full-width{
+    padding-top: 0;
+  }
+
+  &.full-width.nomargins,
+  &.nomargins.color{
+    & + .footer{
+      margin-top: 0;
+    }
+  }
+
   /* Fullwidth Rows */
   &.color{
     padding-bottom: 60px;

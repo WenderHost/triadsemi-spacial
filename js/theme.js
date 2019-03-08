@@ -1,6 +1,8 @@
 (function($){
 
 $(function () {
+  //$('.covervid-video').coverVid(1280,720);
+
   navbar.init();
 
   pricing_charts.init();

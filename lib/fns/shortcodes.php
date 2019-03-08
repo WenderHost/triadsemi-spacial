@@ -6,6 +6,7 @@
  * - [include] - Includes files for display
  * - [listchildren] - Returns a list of child pages
  * - [productline] - Displays products from a WooCommerce category
+ * - [getimage] - Returns an image URL from the Media Library
  * - [wcmsg] - Displays conditional messages in the WooCommerce shopping cart
  */
 
@@ -208,6 +209,33 @@ function product_line( $atts ){
   return $html;
 }
 add_shortcode( 'productline', __NAMESPACE__ . '\\product_line' );
+
+/**
+ * Gets an image from the Media Library
+ *
+ * @param      array  $atts{
+ *  @type int $id Attachment ID.
+ * }
+ *
+ * @return     string  The image.
+ */
+function get_image( $atts ){
+  $args = shortcode_atts( [
+    'id' => null,
+  ], $atts );
+
+  if( is_null( $args['id'] ) )
+    return '<div class="alert alert-warning"><strong>ERROR!</strong> ID is null.</div>';
+
+  $url = wp_get_attachment_url( $args['id'] );
+
+  if( $url ){
+    return $url;
+  } else {
+    return '#no-image-found';
+  }
+}
+add_shortcode( 'getimage', __NAMESPACE__ . '\\get_image' );
 
 /**
  * Displays an info box, but WooCommerce must be installed and

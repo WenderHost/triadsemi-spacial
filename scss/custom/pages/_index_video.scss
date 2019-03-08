@@ -41,7 +41,7 @@
   left: 0;
   right: 0;
   color: #fff;
-  top: calc(50% - 140px);
+  top: calc(50% - 40px);
 
   @media(max-width: 767px) {
     top: 25%;
@@ -295,7 +295,7 @@
 
     .col-md-6 {
       .bg-img {
-        height: 445px; 
+        height: 445px;
       }
     }
   }

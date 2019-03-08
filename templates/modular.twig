@@ -14,6 +14,14 @@
           {{ page_header.content }}
         </section>
       </div>
+    {% elseif 'video_background' == page_header.type %}
+      <div class="homepage-hero-module">
+        <div class="video-container">
+          <div class="homepage-hero-content">
+            {{ page_header.content }}
+          </div>
+        </div>
+      </div>
     {% endif %}
   {% else %}
     {{ parent() }}
@@ -24,9 +32,9 @@
   {% if modules %}
     {% for module in modules %}
       <div class="modular{% if module.attributes.classes %} {{ module.attributes.classes }}{% endif %}"{% if module.attributes.styles %} style="{{ module.attributes.style }}"{% endif %}>
-        <section class="container">
+        {% if 'full-width' not in module.attributes.classes %}<section class="container">{% endif %}
           {{ module.content }}
-        </section>
+        {% if 'full-width' not in module.attributes.classes %}</section>{% endif %}
       </div>
     {% endfor %}
   {% endif %}

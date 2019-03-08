@@ -32,7 +32,8 @@
                     },
                     "choices": {
                         "background_image": "Background Image",
-                        "background_gradient": "Background Gradient"
+                        "background_gradient": "Background Gradient",
+                        "video_background": "Video Background"
                     },
                     "default_value": [],
                     "allow_null": 1,
@@ -184,7 +185,9 @@
                                 "purple": "Purple",
                                 "grey": "Grey",
                                 "modular-callout": "Callout",
-                                "modular-features": "Features"
+                                "modular-features": "Features",
+                                "full-width": "Full Width",
+                                "nomargins": "No Margins"
                             },
                             "default_value": [],
                             "allow_null": 1,
@@ -478,5 +481,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1551201050
+    "modified": 1552074926
 }
