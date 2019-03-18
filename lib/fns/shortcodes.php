@@ -222,18 +222,47 @@ add_shortcode( 'productline', __NAMESPACE__ . '\\product_line' );
 function get_image( $atts ){
   $args = shortcode_atts( [
     'id' => null,
+    'format' => 'url',
+    'size' => 'full',
+    'attr' => null,
+    'class' => null,
+    'width' => null,
+    'height' => null,
+    'style' => null,
   ], $atts );
 
   if( is_null( $args['id'] ) )
     return '<div class="alert alert-warning"><strong>ERROR!</strong> ID is null.</div>';
 
-  $url = wp_get_attachment_url( $args['id'] );
+  switch ( $args['format'] ) {
+    case 'html':
+      $attr_keys = ['class','style','width','height'];
+      foreach( $attr_keys as $key ){
+        if( ! is_null( $args[$key] ) ){
+          $args['attr'][$key] = $args[$key];
+        }
+      }
 
-  if( $url ){
-    return $url;
-  } else {
-    return '#no-image-found';
+      $html = wp_get_attachment_image( $args['id'], $args['size'], false, $args['attr'] );
+      if( $html ){
+        return $html;
+      } else {
+        return '<div class="alert alert-warning"><strong>ERROR!</strong> Unable to retrieve image (ID: ' . $args['id'] . ').</div>';
+      }
+      break;
+
+    default:
+      $url = wp_get_attachment_url( $args['id'] );
+
+      if( $url ){
+        return $url;
+      } else {
+        return '#no-image-found';
+      }
+      break;
   }
+
+
 }
 add_shortcode( 'getimage', __NAMESPACE__ . '\\get_image' );
 
