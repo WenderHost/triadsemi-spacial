@@ -167,3 +167,23 @@
 .admin-bar .woocommerce-notices-wrapper{
   top: 32px;
 }
+/* WooCommerce Waitlist
+ ----------------------------- */
+ .wcwl_elements{
+  background-color: lighten($triadblue,40%);
+  border: 1px solid $triadblue;
+  border-radius: 3px;
+  padding: 20px;
+
+  .woocommerce_waitlist.button{
+    width: 100%;
+    background-color: $triadblue;
+    color: $triadyellow;
+  }
+
+  .wcwl_email{
+    width: 100%;
+    padding: 4px 8px;
+    border: none;
+  }
+ }
