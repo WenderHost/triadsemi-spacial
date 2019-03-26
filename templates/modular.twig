@@ -31,10 +31,11 @@
 {% block content %}
   {% if modules %}
     {% for module in modules %}
-      <div class="modular{% if module.attributes.classes %} {{ module.attributes.classes }}{% endif %}"{% if module.attributes.styles %} style="{{ module.attributes.style }}"{% endif %}>
+      <div id="module-{{ loop.index }}" class="modular{% if module.attributes.classes %} {{ module.attributes.classes }}{% endif %}"{% if module.attributes.styles %} style="{{ module.attributes.style }}"{% endif %}>
         {% if 'full-width' not in module.attributes.classes %}<section class="container">{% endif %}
           {{ module.content }}
         {% if 'full-width' not in module.attributes.classes %}</section>{% endif %}
+        {% if module.edit_link %}<a class="edit-module btn btn-primary btn-sm" href="{{ module.edit_link }}" target="_blank">Edit <i class="entypo-popup"></i></a>{% endif %}
       </div>
     {% endfor %}
   {% endif %}

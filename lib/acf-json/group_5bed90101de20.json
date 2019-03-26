@@ -187,7 +187,9 @@
                                 "modular-callout": "Callout",
                                 "modular-features": "Features",
                                 "full-width": "Full Width",
-                                "nomargins": "No Margins"
+                                "full-height": "Full Height",
+                                "nomargins": "No Margins",
+                                "tight-padding": "Tight Padding"
                             },
                             "default_value": [],
                             "allow_null": 1,
@@ -481,5 +483,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1552074926
+    "modified": 1553622227
 }
