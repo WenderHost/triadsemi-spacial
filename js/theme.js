@@ -2,23 +2,25 @@
 
 $(function () {
   //$('.covervid-video').coverVid(1280,720);
+  $.protip({
+    defaults: {
+      'position': 'top-right-corner',
+      'classes': 'triadtip',
+      'scheme': 'white',
+      'title': 'Analog and Mixed-Signal ASIC Design',
+      'size': 'normal',
+      'width': '400'
+    }
+  });
 
   navbar.init();
-
   pricing_charts.init();
-
   global_notifications.init();
-
   ecommerce.init();
-
   retina.init();
-
   //zoomerang.init();
-
   animation.init();
-
   off_canvas.init();
-
   //newsletter.init();
 });
 
