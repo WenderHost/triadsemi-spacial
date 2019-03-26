@@ -3,6 +3,7 @@
  * Template Name: Modular
  * Description: A page with modular content.
  */
+
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
@@ -31,6 +32,8 @@ endif;
 if( have_rows('modules') ):
   $modules = [];
   while( have_rows('modules') ): the_row();
+    $edit_link = null;
+
     // START Flexible Content
     $attributes = [];
     $css_classes = get_sub_field('css_classes');
@@ -70,6 +73,8 @@ if( have_rows('modules') ):
         $search = array( '{themedir}','{check}' );
         $replace = [ \trailingslashit( get_stylesheet_directory_uri() ), '<i class=\"medium fa-check-circle-o fa-2x fa\"></i>' ];
         $html = str_replace( $search, $replace, $raw_html );
+        if( is_user_logged_in() )
+          $edit_link = get_edit_post_link( $content_block->ID );
         break;
 
       case 'product_line':
@@ -99,24 +104,9 @@ if( have_rows('modules') ):
     $modules[] = [
       'attributes'    => $attributes,
       'content'       => $html,
+      'edit_link'     => $edit_link,
     ];
 
-    // END Flexible Content
-    /*
-    $module = get_sub_field('module');
-    if( $module['content_block'] ){
-      $content_block = do_shortcode( '[dcb id=' . $module['content_block']->ID . ']' );
-      $search = array( '{themedir}','{check}' );
-      $replace = [ \trailingslashit( get_stylesheet_directory_uri() ), '<i class=\"medium fa-check-circle-o fa-2x fa\"></i>' ];
-      $content_block = str_replace( $search, $replace, $content_block );
-    }
-    $modules[] = [
-      'class'         => $module['class'],
-      'style'         => $module['style'],
-      'content'       => $module['content'],
-      'content_block' => $content_block,
-    ];
-    /**/
   endwhile;
   $context['modules'] = $modules;
 endif;
