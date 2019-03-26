@@ -19,6 +19,11 @@
  }
 }
 
+.btn-triadgrey{
+  @include bootstrap-button($triadlightgrey);
+  border-color: $triadlightgrey;
+}
+
 .btn-outline-secondary {
   color: #9c9c9c;
 }
