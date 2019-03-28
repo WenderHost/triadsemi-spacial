@@ -59,6 +59,36 @@
     }
   }
 
+  &.gradient-triad-blues{
+    @include gradient-triad-blues;
+
+    a:not(a.btn){
+      color: #fff;
+
+      &:hover{
+        color: $triadyellow;
+        text-decoration: underline;
+      }
+    }
+
+    h1,h2,h3,h4,h5,h6,p{
+      color: $triadyellow;
+
+      a:not(.btn){
+        color: $triadyellow;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p, li, .figure-caption{
+      color: #fff;
+    }
+  }
+
   &.grey{
     background: $triadlightgrey;
 

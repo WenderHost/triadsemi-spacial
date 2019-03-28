@@ -176,7 +176,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -189,7 +189,8 @@
                                 "full-width": "Full Width",
                                 "full-height": "Full Height",
                                 "nomargins": "No Margins",
-                                "tight-padding": "Tight Padding"
+                                "tight-padding": "Tight Padding",
+                                "gradient-triad-blues": "Gradient - Triad Blues"
                             },
                             "default_value": [],
                             "allow_null": 1,
@@ -198,6 +199,107 @@
                             "ajax": 0,
                             "return_format": "value",
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_5c9cd4f990dfa",
+                            "label": "Background",
+                            "name": "background",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c9cca21bb177",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5c9cd68190dfb",
+                                    "label": "Horizontal Position",
+                                    "name": "horizontal",
+                                    "type": "range",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": "%"
+                                },
+                                {
+                                    "key": "field_5c9cd70c90dfc",
+                                    "label": "Vertical Position",
+                                    "name": "vertical",
+                                    "type": "range",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": "%"
+                                },
+                                {
+                                    "key": "field_5c9cd72590dfd",
+                                    "label": "Size",
+                                    "name": "size",
+                                    "type": "range",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 50,
+                                    "min": "",
+                                    "max": "",
+                                    "step": "",
+                                    "prepend": "",
+                                    "append": "%"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -483,5 +585,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553622227
+    "modified": 1553782701
 }

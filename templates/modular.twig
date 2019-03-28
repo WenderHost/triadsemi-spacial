@@ -31,7 +31,7 @@
 {% block content %}
   {% if modules %}
     {% for module in modules %}
-      <div id="module-{{ loop.index }}" class="modular{% if module.attributes.classes %} {{ module.attributes.classes }}{% endif %}"{% if module.attributes.styles %} style="{{ module.attributes.style }}"{% endif %}>
+      <div id="module-{{ loop.index }}" class="modular{% if module.attributes.classes %} {{ module.attributes.classes }}{% endif %}"{% if module.attributes.styles %} style="{{ module.attributes.styles }}"{% endif %}>
         {% if 'full-width' not in module.attributes.classes %}<section class="container">{% endif %}
           {{ module.content }}
         {% if 'full-width' not in module.attributes.classes %}</section>{% endif %}

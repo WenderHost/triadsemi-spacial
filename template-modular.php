@@ -69,6 +69,25 @@ if( have_rows('modules') ):
 
       case 'dev_content_block':
         $content_block = get_sub_field('content_block');
+
+        $background = get_sub_field('background');
+        if( $background && $background['image'] ){
+          $horz = $background['horizontal'];
+          $vert = $background['vertical'];
+          $size = $background['size'];
+          $additional_css_backgrounds = [];
+          if( $css_classes ){
+            if( in_array( 'purple', $css_classes ) )
+              $additional_css_backgrounds[] = '#2b3695';
+            if( in_array( 'gradient-triad-blues', $css_classes ) )
+              $additional_css_backgrounds[] = 'linear-gradient(135deg,#00aaec 0,#2b3695 100%)';
+          }
+          $attributes['styles'] = 'background: ' . $horz . '% ' . $vert . '%/' . $size . '% url(' . $background['image']['url'] . ') no-repeat';
+          if( 0 < count( $additional_css_backgrounds ) )
+            $attributes['styles'] .= ', ' . implode( ', ', $additional_css_backgrounds );
+          $attributes['styles'].= ';';
+        }
+
         $raw_html = do_shortcode( '[dcb id=' . $content_block->ID . ']' );
         $search = array( '{themedir}','{check}' );
         $replace = [ \trailingslashit( get_stylesheet_directory_uri() ), '<i class=\"medium fa-check-circle-o fa-2x fa\"></i>' ];
@@ -102,9 +121,10 @@ if( have_rows('modules') ):
     }
 
     $modules[] = [
-      'attributes'    => $attributes,
-      'content'       => $html,
-      'edit_link'     => $edit_link,
+      'attributes'        => $attributes,
+      'content'           => $html,
+      'edit_link'         => $edit_link,
+      'background_image'  => $background_image,
     ];
 
   endwhile;
