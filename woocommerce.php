@@ -60,7 +60,11 @@ if ( is_singular( 'product' ) ) {
   // Restore the context and loop back to the main query loop.
   wp_reset_postdata();
 
-  Timber::render( ['templates/woo/single-product.twig'], $context );
+  if( post_password_required( $post->ID ) ){
+    Timber::render( ['templates/single-password.twig'], $context );
+  } else {
+    Timber::render( ['templates/woo/single-product.twig'], $context );
+  }
 } else {
     $posts = Timber::get_posts();
     $context['products'] = $posts;
