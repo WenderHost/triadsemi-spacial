@@ -147,7 +147,7 @@
   {
     "region": "New Jersey",
     "abbr": "NJ",
-    "contacts": "[include file='reps/rep_triad']"
+    "contacts": "[include file='reps/rep_mechtronics-sales_nj']"
   },
   {
     "region": "New Mexico",
@@ -157,7 +157,7 @@
   {
     "region": "New York",
     "abbr": "NY",
-    "contacts": "[include file=reps/rep_fjm-associates]Territory: Upstate New York<br /><br />[include file='reps/rep_triad']"
+    "contacts": "[include file='reps/rep_mechtronics-sales_ny'][include file=reps/rep_fjm-associates]Territory: Upstate New York"
   },
   {
     "region": "North Carolina",
@@ -187,7 +187,7 @@
   {
     "region": "Pennsylvania",
     "abbr": "PA",
-    "contacts": "[include file=reps/rep_millennium-alliance]<br/>Territory: Western Pennsylvania<br/><br/>[include file='reps/rep_triad']"
+    "contacts": "[include file=reps/rep_mechtronics-sales_pa][include file=reps/rep_millennium-alliance]Territory: Western Pennsylvania"
   },
   {
     "region": "Rhode Island",
