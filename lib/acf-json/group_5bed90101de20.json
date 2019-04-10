@@ -122,6 +122,26 @@
                     "multiple": 0,
                     "return_format": "object",
                     "ui": 1
+                },
+                {
+                    "key": "field_5ca7c2ffef74e",
+                    "label": "Height",
+                    "name": "height",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 300,
+                    "min": 160,
+                    "max": 800,
+                    "step": 10,
+                    "prepend": "",
+                    "append": "px"
                 }
             ]
         },
@@ -585,5 +605,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553782701
+    "modified": 1554498633
 }

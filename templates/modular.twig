@@ -15,7 +15,7 @@
         </section>
       </div>
     {% elseif 'video_background' == page_header.type %}
-      <div class="homepage-hero-module">
+      <div class="homepage-hero-module" {% if page_header.height is not empty %}style="height: {{ page_header.height }}px"{% endif %}>
         <div class="video-container">
           <div class="homepage-hero-content">
             {{ page_header.content }}

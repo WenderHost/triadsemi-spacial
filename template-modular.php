@@ -11,6 +11,7 @@ $context['post'] = $post;
 $header = get_field('header');
 if( $header ):
   $type = $header['type'];
+  $height = $header['height'];
   $background = ( $header['background']['url'] )? $header['background']['url'] : get_stylesheet_directory_uri() . '/images/unsplash/michael-benz-189971.jpg' ;
 
   if( $header['content_block'] ){
@@ -23,9 +24,10 @@ if( $header ):
   }
 
   $context['page_header'] = [
-    'type'              => $type,
+    'type'        => $type,
     'background'  => $background,
-    'content'           => $content,
+    'content'     => $content,
+    'height'      => $height,
   ];
 endif;
 
