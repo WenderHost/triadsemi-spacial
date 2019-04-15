@@ -124,15 +124,46 @@
                     "ui": 1
                 },
                 {
+                    "key": "field_5cb45ad13c423",
+                    "label": "Set header height?",
+                    "name": "set_header_height",
+                    "type": "checkbox",
+                    "instructions": "Do you want to specify the header's height?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "true": "Yes"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                },
+                {
                     "key": "field_5ca7c2ffef74e",
                     "label": "Height",
                     "name": "height",
                     "type": "range",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5cb45ad13c423",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -605,5 +636,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1554498633
+    "modified": 1555323861
 }

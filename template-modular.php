@@ -23,12 +23,16 @@ if( $header ):
     $content = $header['content'];
   }
 
+
+
   $context['page_header'] = [
     'type'        => $type,
     'background'  => $background,
     'content'     => $content,
-    'height'      => $height,
   ];
+
+  if( $header['set_header_height'] )
+    $context['height'] = $height;
 endif;
 
 if( have_rows('modules') ):
