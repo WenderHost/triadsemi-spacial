@@ -17,7 +17,7 @@
   {
     "region": "Arkansas",
     "abbr": "AR",
-    "contacts": "[include file='reps/rep_triad']"
+    "contacts": "[include file='reps/rep_tristar-group']"
   },
   {
     "region": "California",
@@ -87,7 +87,7 @@
   {
     "region": "Louisiana",
     "abbr": "LA",
-    "contacts": "[include file='reps/rep_triad']"
+    "contacts": "[include file='reps/rep_tristar-group']"
   },
   {
     "region": "Maine",
@@ -177,7 +177,7 @@
   {
     "region": "Oklahoma",
     "abbr": "OK",
-    "contacts": "[include file='reps/rep_triad']"
+    "contacts": "[include file='reps/rep_tristar-group']"
   },
   {
     "region": "Oregon",
@@ -212,7 +212,7 @@
   {
     "region": "Texas",
     "abbr": "TX",
-    "contacts": "[include file='reps/rep_triad']"
+    "contacts": "[include file='reps/rep_tristar-group-tx']"
   },
   {
     "region": "Utah",
@@ -363,6 +363,11 @@
     "region": "Finland",
     "abbr": "FI",
     "contacts": "[include file=reps/rep_redtree-finland]"
+  },
+  {
+    "region": "Mexico",
+    "abbr": "MX",
+    "contacts": "[include file=reps/rep_tristar-group-mex]"
   },
   {
     "region": "Germany",
