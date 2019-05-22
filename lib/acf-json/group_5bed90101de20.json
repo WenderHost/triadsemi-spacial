@@ -624,6 +624,20 @@
                 "operator": "==",
                 "value": "template-modular.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "elementor_header_footer"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "default"
+            }
         ]
     ],
     "menu_order": 0,
@@ -636,5 +650,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555323861
+    "modified": 1558474676
 }

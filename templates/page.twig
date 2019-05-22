@@ -1,2 +1,9 @@
 {% extends "base.twig" %}
 
+{% block header %}
+  {% if elementor_page %}
+    {{ page_header.content }}
+  {% else %}
+    {{ parent() }}
+  {% endif %}
+{% endblock %}
