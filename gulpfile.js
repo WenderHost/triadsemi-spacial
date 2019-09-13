@@ -8,51 +8,43 @@ var gulp = require('gulp'),
     concat = require('gulp-concat')
 
 // Styles
-gulp.task('styles', function () {
+function styles(){
   return gulp.src('scss/theme.scss')
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'))
-})
+}
 
 // Styles ecommerce
-gulp.task('styles-ecommerce', function () {
+function stylesEcommerce(){
   return gulp.src('scss/custom/ecommerce/theme.scss')
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(rename({basename: 'ecommerce', suffix: '.min'}))
+    .pipe(rename({ basename: 'ecommerce', suffix: '.min' }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'))
-})
+}
 
 // Scripts
-gulp.task('scripts', function () {
+function scripts(){
   return gulp.src([
-      'js/bootstrap/*.js',
-      'js/vendor/*.js',
-      'js/custom/*.js',
-      'js/theme.js'
-    ])
+    'js/bootstrap/*.js',
+    'js/vendor/*.js',
+    'js/custom/*.js',
+    'js/theme.js'
+  ])
     .pipe(sourcemaps.init())
     .pipe(concat('theme.js'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'))
-})
+}
+
 
 // Default task
-gulp.task('default', ['styles', 'styles-ecommerce', 'scripts'])
-
-// Watch
-gulp.task('watch', function () {
-  // Watch .scss files
-  gulp.watch(['scss/**/*.scss'], ['styles', 'styles-ecommerce'])
-
-  // Watch .js files
-  gulp.watch('js/**/*.js', ['scripts'])
-})
+gulp.task('default', gulp.series( styles, stylesEcommerce, scripts ) )
