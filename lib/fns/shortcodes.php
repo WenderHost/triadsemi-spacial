@@ -5,6 +5,7 @@
  * - [icon] - Returns HTML markup for icons
  * - [include] - Includes files for display
  * - [listchildren] - Returns a list of child pages
+ * - [post_title] - Displays the `post_title` of the current post
  * - [productline] - Displays products from a WooCommerce category
  * - [getimage] - Returns an image URL from the Media Library
  * - [wcmsg] - Displays conditional messages in the WooCommerce shopping cart
@@ -129,6 +130,14 @@ function list_children( $atts ){
   }
 }
 add_shortcode( 'listchildren', __NAMESPACE__ . '\\list_children' );
+
+/**
+ * Displays the post_title of the current post.
+ */
+function post_title_shortcode(){
+    return get_the_title();
+}
+add_shortcode('post_title', __NAMESPACE__ . '\\post_title_shortcode');
 
 /**
  * [productline] shortcode
