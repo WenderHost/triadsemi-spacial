@@ -40,6 +40,7 @@ class StarterSite extends Timber\Site {
     // ACF Options Page
     $header_logo = get_field( 'header_logo', 'option' );
     $context['header']['logo'] = ( empty( $header_logo ) )? 'triad' : $header_logo;
+    $context['popups']['request_info_popup_url'] = get_field('request_info_popup_url','option');
 
     // WooCommerce Cart Contents
     if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {

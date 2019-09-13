@@ -17,7 +17,7 @@
           {% if 'coming_soon' == call_to_action %}
             <button type="button" class="btn btn-secondary btn-block" style="margin: 1rem 0;"><i class="entypo-new"></i> Coming Soon!</button>
           {% elseif 'request_info' == call_to_action %}
-            <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%20settings%3DeyJpZCI6IjI0MTgxIiwidG9nZ2xlIjpmYWxzZX0%3D" class="btn btn-primary btn-block" style="margin: 1rem 0;"><i class="entypo-hand"></i> Request Additional Information</a>
+            <a href="{{ popups.request_info_popup_url }}" class="btn btn-primary btn-block" style="margin: 1rem 0;"><i class="entypo-hand"></i> Request Additional Information</a>
           {% else %}
             {% do action('woocommerce_single_product_summary') %}
             {% if bulk_discounts is not empty %}

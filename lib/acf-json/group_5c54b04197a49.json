@@ -25,6 +25,25 @@
             "layout": "vertical",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_5d7b953ef6e08",
+            "label": "Request Info Popup URL",
+            "name": "request_info_popup_url",
+            "type": "text",
+            "instructions": "When you have the Popup Trigger URL for Elementor Pro plugin installed, you can grab the \"Open\" URL for the Request Info Popup and add it here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -44,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1549057512
+    "modified": 1568399347
 }
