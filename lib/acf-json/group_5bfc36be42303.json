@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_5bfc36cae4aa4",
-            "label": "Coming Soon",
-            "name": "coming_soon",
-            "type": "checkbox",
+            "label": "Call to Action",
+            "name": "call_to_action",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,14 +16,15 @@
                 "id": ""
             },
             "choices": {
-                "true": "Coming soon?"
+                "coming_soon": "Coming soon?",
+                "request_info": "Request additional information"
             },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "horizontal",
-            "toggle": 0,
+            "allow_null": 1,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
             "return_format": "value",
-            "save_custom": 0
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -43,5 +44,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543506847
+    "modified": 1568233081
 }

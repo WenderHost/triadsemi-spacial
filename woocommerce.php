@@ -17,6 +17,10 @@ if ( is_singular( 'product' ) ) {
   $coming_soon = get_field('coming_soon');
   $context['coming_soon'] = ( isset( $coming_soon[0] ) )? $coming_soon[0] : false ;
 
+  $call_to_action = get_field('call_to_action');
+  $context['call_to_action'] = ( isset( $call_to_action ) && ! empty( $call_to_action ) )? $call_to_action : false ;
+
+
   // Get related products
   $related_limit               = wc_get_loop_prop( 'columns' );
   $related_ids                 = wc_get_related_products( $context['post']->id, $related_limit );
